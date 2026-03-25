@@ -1,0 +1,114 @@
+[
+  {
+    "id": "b2b-help-center",
+    "title": "B2B Help Center",
+    "description": "Customer portal that gives enterprise customers direct access to product documentation, knowledge articles, and support ticketing — so they can resolve issues independently without relying on the support team.",
+    "role": "Senior Product Designer",
+    "projectType": "Product Design",
+    "deliverables": ["UX Research", "Interaction Design", "Prototyping", "Usability Testing"],
+    "client": "Evinova",
+    "year": "2024",
+    "image": "/project-02.png",
+    "sections": [
+      {
+        "title": "The Challenge",
+        "body": "Evinova's enterprise customers struggled to find answers on their own, flooding the support team with repetitive tickets and slowing down issue resolution. We needed a self-service experience intuitive enough for non-technical users while powerful enough for technical teams managing complex clinical software.",
+        "image": null
+      },
+      {
+        "title": "Discovery & Research",
+        "body": "Through user interviews and support ticket analysis, we identified the top 20 most frequent support requests. Card sorting and tree testing sessions with 30 participants shaped the information architecture — revealing that users grouped content by task, not by product feature. This insight completely restructured our navigation model.",
+        "image": null
+      },
+      {
+        "title": "Design & Iteration",
+        "body": "We built a library of reusable components — search, article cards, feedback widgets, and ticket submission forms — that snapped into a flexible grid. Every component was tested for accessibility (WCAG 2.1 AA) and localisation readiness across six languages. Three rounds of usability testing with customer teams refined the final flows.",
+        "image": null
+      }
+    ]
+  },
+  {
+    "id": "clinical-trial-dashboard",
+    "title": "Clinical Trial Dashboard",
+    "description": "An end-to-end data platform that lets clinical operations teams monitor site performance, patient enrollment, and protocol deviations in real time — cutting reporting lag from weeks down to hours.",
+    "role": "Lead Product Designer",
+    "projectType": "Data Visualisation · Enterprise",
+    "deliverables": ["Discovery", "Information Architecture", "UI Design", "Design Handoff"],
+    "client": "AstraZeneca",
+    "year": "2023",
+    "image": "/project-02.png",
+    "sections": [
+      {
+        "title": "Problem Space",
+        "body": "Clinical operations managers spent up to 12 hours per week manually compiling spreadsheets from multiple data sources to understand trial health. Errors were common, decisions were delayed, and the lack of a shared view created friction between sites and sponsors across different time zones.",
+        "image": null
+      },
+      {
+        "title": "Research Approach",
+        "body": "We ran contextual inquiry sessions with clinical data managers, site coordinators, and medical monitors across three countries. Journey mapping revealed seven distinct pain points, with data aggregation and alert fatigue ranking highest. These findings directly shaped the dashboard's information hierarchy.",
+        "image": null
+      },
+      {
+        "title": "Final Design",
+        "body": "The dashboard centres on a live enrollment funnel, a site performance heatmap, and a configurable alert inbox. A progressive disclosure pattern keeps the interface uncluttered for daily check-ins while surfacing full audit trails on demand. Post-launch surveys showed a 74% reduction in time spent on manual reporting.",
+        "image": null
+      }
+    ]
+  },
+  {
+    "id": "patient-onboarding",
+    "title": "Patient Onboarding Flow",
+    "description": "A mobile-first onboarding experience that guides new patients through app registration, consent forms, and first-time device pairing — cutting drop-off rates by 38% and significantly reducing call-centre volume.",
+    "role": "Product Designer",
+    "projectType": "Mobile UX · Healthcare",
+    "deliverables": ["UX Research", "Wireframing", "UI Design", "Accessibility Audit"],
+    "client": "Huma Therapeutics",
+    "year": "2022",
+    "image": "/project-02.png",
+    "sections": [
+      {
+        "title": "Context & Constraints",
+        "body": "Patients enrolling in digital health studies are often older, less tech-savvy, and anxious about data privacy. The onboarding had to work on low-end Android devices, support multiple languages, and meet healthcare data regulations across the EU and UK — all within a tight six-week delivery timeline.",
+        "image": null
+      },
+      {
+        "title": "Key Insights",
+        "body": "Diary studies and unmoderated usability tests with 24 participants uncovered three critical drop-off moments: account creation, eConsent signing, and Bluetooth device pairing. Participants expected plain-language explanations and wanted the ability to save progress and return later — a feature the original flow completely lacked.",
+        "image": null
+      },
+      {
+        "title": "Outcome & Impact",
+        "body": "After launch, onboarding completion rates rose from 54% to 92% over the first quarter. Support tickets related to setup dropped by 61%. The consent module was subsequently adopted as the company-wide standard for all new study apps, benefiting five additional products in the pipeline.",
+        "image": null
+      }
+    ]
+  },
+  {
+    "id": "design-system",
+    "title": "Enterprise Design System",
+    "description": "A shared component library and design token framework adopted by five product teams — reducing design-to-dev handoff time by 60% and establishing a single source of truth for UI across the entire platform.",
+    "role": "Senior Product Designer",
+    "projectType": "Design Systems · Enterprise",
+    "deliverables": ["Token Architecture", "Component Design", "Documentation", "Governance Model"],
+    "client": "Huma Therapeutics",
+    "year": "2023",
+    "image": "/project-02.png",
+    "sections": [
+      {
+        "title": "The Problem",
+        "body": "Five product teams were independently solving the same UI problems — creating inconsistent experiences for users and duplicating effort across design and engineering. With no shared language between designers and developers, even small changes required lengthy back-and-forth and frequent rework.",
+        "image": null
+      },
+      {
+        "title": "System Architecture",
+        "body": "We established a three-tier token model covering global, semantic, and component-level values. A Figma library with 120+ components was paired with a Storybook implementation, each component documented with usage guidelines, do/don't examples, and accessibility notes.",
+        "image": null
+      },
+      {
+        "title": "Adoption & Impact",
+        "body": "After a phased rollout with embedded office hours and a dedicated Slack channel for support, all five product teams had migrated their core flows within four months. Design-to-dev handoff time dropped by 60%, and cross-team design reviews became substantially shorter due to a shared vocabulary.",
+        "image": null
+      }
+    ]
+  }
+]
