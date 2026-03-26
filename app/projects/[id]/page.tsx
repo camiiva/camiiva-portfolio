@@ -1,9 +1,11 @@
 import { notFound } from "next/navigation";
-import Image from "next/image";
 import NavBar from "@/app/components/NavBar";
 import Footer from "@/app/components/Footer";
 import TableOfContents from "@/app/components/TableOfContents";
 import ProjectCard from "@/app/components/ProjectCard";
+import CursorGlow from "@/app/components/CursorGlow";
+import ProjectHeader from "@/app/components/ProjectHeader";
+import ProjectSection from "@/app/components/ProjectSection";
 import projects from "@/data/projects.json";
 
 function slugify(text: string) {
@@ -41,41 +43,20 @@ export default async function ProjectPage({
   const otherProjects = projects.filter((p) => p.id !== id);
 
   return (
-    <div className="min-h-screen bg-content-bg">
+    <div className="min-h-screen bg-content-bg md:cursor-none">
+      <CursorGlow />
+
       {/* ── Dark header ─────────────────────────────────────── */}
       <header className="bg-bg text-white">
         <NavBar />
-
-        <div className="container-page pt-8 pb-14 md:pt-10 md:pb-16 xl:pt-12 xl:pb-26">
-          {/* Back link */}
-          <a
-            href="/#work"
-            className="mb-8 inline-block font-heading text-base font-bold leading-[1.1] tracking-[-0.16px] text-accent transition-opacity duration-default hover:opacity-70 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent md:mb-10 xl:mb-12"
-          >
-            ← Back
-          </a>
-
-          {/* Title */}
-          <h1 className="mb-6 font-heading text-[36px] font-bold leading-[1.1] tracking-[-0.64px] md:mb-8 md:text-[48px] xl:mb-6 xl:text-[64px]">
-            {project.title}
-          </h1>
-
-          {/* Description + metadata row */}
-          <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between md:gap-48 xl:justify-start">
-            {/* Description */}
-            <p className="font-body text-base leading-[1.4] text-white md:text-[20px] xl:flex-1">
-              {project.description}
-            </p>
-
-            {/* Metadata */}
-            <div className="shrink-0 font-body text-base leading-[1.6] text-white md:w-[260px] md:text-[20px] xl:w-[360px]">
-              <p>My role: {project.role}</p>
-              <p>Project type: {project.projectType}</p>
-              <p>Deliverables: {project.deliverables.join(", ")}</p>
-              <p>Client: {project.client}</p>
-            </div>
-          </div>
-        </div>
+        <ProjectHeader
+          title={project.title}
+          description={project.description}
+          role={project.role}
+          projectType={project.projectType}
+          deliverables={project.deliverables}
+          client={project.client}
+        />
       </header>
 
       {/* ── Light content area ───────────────────────────────── */}
@@ -83,27 +64,14 @@ export default async function ProjectPage({
         <div className="xl:flex xl:items-start xl:gap-48">
           {/* Sections */}
           <div className="flex flex-col gap-14 md:gap-18 xl:gap-20 xl:flex-1">
-            {project.sections.map((section, i) => {
-              const id = slugify(section.title);
-              return (
-                <div key={i} id={id}>
-                  {/* Section title */}
-                  <h2 className="mb-3 font-heading text-[22px] font-bold leading-[1.4] text-content-text md:text-[28px] xl:text-[32px]">
-                    {section.title}
-                  </h2>
-
-                  {/* Body text */}
-                  <p className="mb-12 font-body text-base leading-[1.4] text-content-text md:mb-16 md:text-[20px] xl:max-w-[1106px]">
-                    {section.body}
-                  </p>
-
-                  {/* Image placeholder */}
-                  <div className="relative h-52 w-full overflow-hidden rounded-card bg-img-bg md:h-72 xl:h-[600px] xl:max-w-[1106px]">
-                    <Image src="/project-02.png" alt="" fill className="object-cover" />
-                  </div>
-                </div>
-              );
-            })}
+            {project.sections.map((section, i) => (
+              <ProjectSection
+                key={i}
+                sectionId={slugify(section.title)}
+                title={section.title}
+                body={section.body}
+              />
+            ))}
           </div>
 
           {/* Table of contents — xl only */}
