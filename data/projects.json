@@ -1,113 +1,134 @@
 [
   {
-    "id": "b2b-help-center",
-    "title": "B2B Help Center",
-    "description": "Customer portal that gives enterprise customers direct access to product documentation, knowledge articles, and support ticketing — so they can resolve issues independently without relying on the support team.",
-    "role": "Senior Product Designer",
-    "projectType": "Product Design",
-    "deliverables": ["UX Research", "Interaction Design", "Prototyping", "Usability Testing"],
-    "client": "Evinova",
-    "year": "2024",
-    "image": "/project-02.png",
-    "sections": [
-      {
-        "title": "The Challenge",
-        "body": "Evinova's enterprise customers struggled to find answers on their own, flooding the support team with repetitive tickets and slowing down issue resolution. We needed a self-service experience intuitive enough for non-technical users while powerful enough for technical teams managing complex clinical software.",
-        "image": null
-      },
-      {
-        "title": "Discovery & Research",
-        "body": "Through user interviews and support ticket analysis, we identified the top 20 most frequent support requests. Card sorting and tree testing sessions with 30 participants shaped the information architecture — revealing that users grouped content by task, not by product feature. This insight completely restructured our navigation model.",
-        "image": null
-      },
-      {
-        "title": "Design & Iteration",
-        "body": "We built a library of reusable components — search, article cards, feedback widgets, and ticket submission forms — that snapped into a flexible grid. Every component was tested for accessibility (WCAG 2.1 AA) and localisation readiness across six languages. Three rounds of usability testing with customer teams refined the final flows.",
-        "image": null
-      }
-    ]
-  },
-  {
-    "id": "clinical-trial-dashboard",
-    "title": "Clinical Trial Dashboard",
-    "description": "An end-to-end data platform that lets clinical operations teams monitor site performance, patient enrollment, and protocol deviations in real time — cutting reporting lag from weeks down to hours.",
-    "role": "Lead Product Designer",
-    "projectType": "Data Visualisation · Enterprise",
-    "deliverables": ["Discovery", "Information Architecture", "UI Design", "Design Handoff"],
-    "client": "AstraZeneca",
-    "year": "2023",
-    "image": "/project-02.png",
-    "sections": [
-      {
-        "title": "Problem Space",
-        "body": "Clinical operations managers spent up to 12 hours per week manually compiling spreadsheets from multiple data sources to understand trial health. Errors were common, decisions were delayed, and the lack of a shared view created friction between sites and sponsors across different time zones.",
-        "image": null
-      },
-      {
-        "title": "Research Approach",
-        "body": "We ran contextual inquiry sessions with clinical data managers, site coordinators, and medical monitors across three countries. Journey mapping revealed seven distinct pain points, with data aggregation and alert fatigue ranking highest. These findings directly shaped the dashboard's information hierarchy.",
-        "image": null
-      },
-      {
-        "title": "Final Design",
-        "body": "The dashboard centres on a live enrollment funnel, a site performance heatmap, and a configurable alert inbox. A progressive disclosure pattern keeps the interface uncluttered for daily check-ins while surfacing full audit trails on demand. Post-launch surveys showed a 74% reduction in time spent on manual reporting.",
-        "image": null
-      }
-    ]
-  },
-  {
-    "id": "patient-onboarding",
-    "title": "Patient Onboarding Flow",
-    "description": "A mobile-first onboarding experience that guides new patients through app registration, consent forms, and first-time device pairing — cutting drop-off rates by 38% and significantly reducing call-centre volume.",
-    "role": "Product Designer",
-    "projectType": "Mobile UX · Healthcare",
-    "deliverables": ["UX Research", "Wireframing", "UI Design", "Accessibility Audit"],
-    "client": "Huma Therapeutics",
+    "id": "nicolette",
+    "title": "Nicolette",
+    "client": "Nicolette",
+    "product": "Mobile app",
+    "category": "Case Study 01",
+    "tagline": "Helping parents feel empowered on their baby's health journey",
+    "summary": "Nicolette helps parents of NICU babies understand complex medical data and stay involved in their child's care. We expanded their existing app from hospital-only tablets to mobile, so parents could access it anywhere — inside or outside the hospital.",
+    "overview": "Nicolette is a company that creates empowerment applications for patients fighting acute health battles. They realized that it's hard for parents to understand complex medical data about their babies in the NICU, given the stressful situation they're in. They had an existing app called NicoBoard that simplified medical information to empower parents to have a say in their child's medical decisions. But there was a catch: the app was only available on hospital tablets and parents could not access it outside the hospital.",
+    "goal": "The Nicolette team wanted to make their app more accessible to parents of babies in the NICU by expanding it to mobile devices. This meant that parents could use the app both inside and outside the hospital.",
+    "role": "Senior Product Designer in charge of both strategy and execution of design in this project",
     "year": "2022",
     "image": "/project-02.png",
-    "sections": [
+    "deliverables": ["UX/UI Design", "Mobile App", "Design System", "Branding"],
+    "tags": ["UX/UI", "Mobile App", "Healthcare", "Design System", "Branding"],
+    "process": [
       {
-        "title": "Context & Constraints",
-        "body": "Patients enrolling in digital health studies are often older, less tech-savvy, and anxious about data privacy. The onboarding had to work on low-end Android devices, support multiple languages, and meet healthcare data regulations across the EU and UK — all within a tight six-week delivery timeline.",
-        "image": null
+        "step": "01",
+        "title": "Understanding the problem",
+        "description": "Before diving into design, we wanted to fully understand the problem and the needs of the stakeholders and users. We held a collaborative workshop to create a clear problem statement for the product. We also conducted a comprehensive assessment of the old app, identifying design strengths and weaknesses. This informed our approach and set us up for success in creating a better user experience."
       },
       {
-        "title": "Key Insights",
-        "body": "Diary studies and unmoderated usability tests with 24 participants uncovered three critical drop-off moments: account creation, eConsent signing, and Bluetooth device pairing. Participants expected plain-language explanations and wanted the ability to save progress and return later — a feature the original flow completely lacked.",
-        "image": null
+        "step": "02",
+        "title": "Design strategy and scope",
+        "description": "After identifying the problem, we defined clear business and design objectives for the project. To ensure a structured approach, we created a sitemap with the main stakeholders to define the scope of the project and provide a clear navigation structure."
       },
       {
-        "title": "Outcome & Impact",
-        "body": "After launch, onboarding completion rates rose from 54% to 92% over the first quarter. Support tickets related to setup dropped by 61%. The consent module was subsequently adopted as the company-wide standard for all new study apps, benefiting five additional products in the pipeline.",
-        "image": null
+        "step": "03",
+        "title": "Building up a new brand style",
+        "description": "We got the opportunity to re-brand the current visual style since it wasn't actually reflecting the product vision and values. We brainstormed and experimented with different ideas until we finally settled on a concept that we all loved. We wanted the new visual style to be all about empowering and giving confidence to parents. The new visual style aimed to showcase the product's ability to connect parents to their baby's health journey in a meaningful way. We went back to the original palette of NicoBoard and updated it with bold and vibrant colors that would resonate with the target audience. This refresh not only modernized the visual identity but also conveyed a sense of energy and optimism."
+      },
+      {
+        "step": "04",
+        "title": "Design system",
+        "description": "To ensure a cohesive brand experience, we created a base design system that could be used as a foundation for designing high-fidelity mockups. By doing this, they were able to work more efficiently and effectively, while maintaining a consistent look and feel throughout the design process. In addition to the brand style, the design system was also designed to reflect the product's main concept. This means that the app's design not only looks good, but also effectively communicates its purpose to users."
+      },
+      {
+        "step": "05",
+        "title": "Crafting the app",
+        "description": "We collaborated with the client to understand their needs and make the medical data more digestible and engaging for parents. We transformed the charts into an interactive experience, enabling users to get detailed information about their baby's health, creating an intuitive and informative user experience. Our design team was up for the challenge of creating a dynamic app that required flexible designs. We knew that we needed to think outside the box to create something that could adapt to changing content while highlighting essential health information. With a lot of experimentation, we crafted designs that were as flexible as they were visually stunning."
+      },
+      {
+        "step": "06",
+        "title": "Prototyping and user testing",
+        "description": "Once we agreed on the direction for the product with the client, we conducted user testing to validate our ideas and improve the user experience for parents. Using an online tool called PlaybookUX, we created a prototype and a script to guide the testing process. We observed 10 real users interacting with our app and gathered valuable feedback on how they used it and what they found important. This feedback helped us improve the presentation of medical data and the visibility of chart interactivity. Armed with this feedback, we refined the user experience to create a product that better meets the needs of parents."
+      },
+      {
+        "step": "07",
+        "title": "Handoff and shipping",
+        "description": "Exploring complex medical data and finding the right chart library was a real challenge during the handoff process. Working alongside the developers, we experimented and tweaked until we found the perfect balance that delivered fast-performing charts with an intuitive user experience. It wasn't easy, but our determination paid off and we created a suite of charts that were not only user-friendly but also beautifully aligned with our designs. With these charts, users could now easily navigate and understand complex medical data without any hassle."
+      }
+    ],
+    "impact": [
+      {
+        "title": "Healthcare apps",
+        "description": "Knowing that my work would have a significant impact on people's lives made me feel a greater sense of ownership over and responsibility over the project. I approached each design decision with a greater level of consciousness, knowing that even small details could make a big difference to the end-user."
+      },
+      {
+        "title": "Revamped brand style",
+        "description": "By revamping the overall style of the brand, we helped them set the foundation for future growth. By investing in their visual identity, we have set them up for success and ensured that their brand will remain recognizable and relevant."
+      },
+      {
+        "title": "Impact on families",
+        "description": "We successfully delivered an experience that improved the way parents can be involved in their baby's health journey. We transformed complicated medical data into actionable insights for parents."
       }
     ]
   },
   {
-    "id": "design-system",
-    "title": "Enterprise Design System",
-    "description": "A shared component library and design token framework adopted by five product teams — reducing design-to-dev handoff time by 60% and establishing a single source of truth for UI across the entire platform.",
-    "role": "Senior Product Designer",
-    "projectType": "Design Systems · Enterprise",
-    "deliverables": ["Token Architecture", "Component Design", "Documentation", "Governance Model"],
-    "client": "Huma Therapeutics",
+    "id": "jombine",
+    "title": "Jombine",
+    "client": "Jombine",
+    "product": "Web app",
+    "category": "Case Study 02",
+    "tagline": "Join our hiring revolution",
+    "summary": "Jombine set out to fix a broken hiring process — one that's costly for small companies and reductive for candidates. We designed a platform that lets employers find the right people and candidates showcase who they really are, beyond a resume.",
+    "overview": "Jombine was a product idea aiming to revolutionize the hiring process for both employers and candidates. Small and medium-sized companies struggle with expensive, time-consuming and ineffective hiring processes while candidates find it frustrating to present themselves only through resumes. This traditional format fails to showcase their career goals, values, and ambitions.",
+    "goal": "The Jombine team was looking to bring their product vision to life, with a digital experience that could allow employers and candidates to get connected and optimize the hiring process.",
+    "role": "I led the design and creative process of the project from start to finish. In addition to overseeing the strategy and execution of design tasks. ",
     "year": "2023",
     "image": "/project-02.png",
-    "sections": [
+    "deliverables": ["UX/UI Design", "Web App", "Design System", "Branding", "Marketing Website"],
+    "tags": ["UX/UI", "Web App", "SaaS", "Design System", "Branding", "Marketing Website"],
+    "process": [
       {
-        "title": "The Problem",
-        "body": "Five product teams were independently solving the same UI problems — creating inconsistent experiences for users and duplicating effort across design and engineering. With no shared language between designers and developers, even small changes required lengthy back-and-forth and frequent rework.",
-        "image": null
+        "step": "01",
+        "title": "Understanding project scope",
+        "description": "We kicked off our UX process by mapping out the experiences we wanted to create for both candidates and employers. As we dove deeper, we discovered that we needed not only a platform for managing candidates but also an enjoyable experience for candidates to showcase their skills and experience. Then, we analyzed and optimized user flows to create a seamless experience between both products. We then proceeded to wireframing key screens that could help us understand project scope and feature mapping."
       },
       {
-        "title": "System Architecture",
-        "body": "We established a three-tier token model covering global, semantic, and component-level values. A Figma library with 120+ components was paired with a Storybook implementation, each component documented with usage guidelines, do/don't examples, and accessibility notes.",
-        "image": null
+        "step": "02",
+        "title": "Building up a new brand style",
+        "description": "We teamed up with Jombine to refresh their visual brand style. With no existing foundation, we took the opportunity to brainstorm fresh ideas and create a brand identity that aligned with their product vision. We explored and developed concepts for Jombine's visual identity, taking inspiration from the NFL's 'Combine' recruiting process. The NFL strategy chalkboard was a crucial reference for our product visuals. Our goal was to visually represent Jombine's mission of creating the perfect match between candidates and companies. We experimented with color palettes, typography, and graphic elements to create a cohesive brand style."
       },
       {
-        "title": "Adoption & Impact",
-        "body": "After a phased rollout with embedded office hours and a dedicated Slack channel for support, all five product teams had migrated their core flows within four months. Design-to-dev handoff time dropped by 60%, and cross-team design reviews became substantially shorter due to a shared vocabulary.",
-        "image": null
+        "step": "03",
+        "title": "Design system",
+        "description": "We created a visual system for Jombine that was cohesive across all experiences. We began by establishing foundations such as color schemes and typography and designed basic components like input fields, buttons, and icons. We added vibrance and humanity to the product by creating illustrations. As we continued designing, the library expanded and new components and patterns emerged."
+      },
+      {
+        "step": "04",
+        "title": "Crafting the product",
+        "description": "With our scalable system in place, we began crafting screens for both candidates and employers. We prioritized creating layouts that could adapt to dynamic content and user input, making editing patterns crucial for success. Through thoughtful design, we created two distinct experiences that were cohesive, responsive, and intuitive for all users."
+      },
+      {
+        "step": "05",
+        "title": "Marketing website",
+        "description": "We needed to find a way to not only create an intuitive experience of our core product but also a way to attract users into using our platform. We recognized that the current website wasn't achieving the desired impact, despite successfully conveying the product's value. We decided to redesign the website, focusing on creating a cohesive visual design that was both easy to navigate and digestible. Our new design featured an improved content structure and a consistent brand style, resulting in a more effective user experience across all Jombine products."
+      },
+      {
+        "step": "06",
+        "title": "Handoff and shipping",
+        "description": "We had an amazing collaboration with the development team, constantly communicating to ensure our design ideas were user-friendly and scalable. We made sure to approach development from an atomic design perspective, creating a base design system that we maintained using Storybook as our main tool to create and manage components. This allowed us to keep consistency throughout the entire platform and create a seamless user experience."
+      }
+    ],
+    "impact": [
+      {
+        "title": "Collaboration with the client",
+        "description": "Constant communication and collaboration with the client ensured that user needs were at the core of the design process."
+      },
+      {
+        "title": "Brand refresh",
+        "description": "Revamping the visual identity of Jombine gave the brand a strong concept and personality, increasing credibility in the market."
+      },
+      {
+        "title": "Marketing website",
+        "description": "Revamping the visual identity of Jombine gave the brand a strong concept and personality, increasing credibility in the market."
+      },
+      {
+        "title": "User testing and metrics",
+        "description": "If I were to work on this project again, I think user testing and analytics would have been valuable to validate if the designs were solving user needs, but unfortunately, they were not feasible due to budget constraints."
       }
     ]
   }

@@ -18,7 +18,7 @@ export default function Home() {
           <ProjectCard
             key={project.id}
             title={project.title}
-            description={project.description}
+            description={project.summary}
             company={project.client}
             year={project.year}
             image={project.image}

@@ -26,7 +26,7 @@ export async function generateMetadata({
   if (!project) return {};
   return {
     title: `${project.title} — Camila Valencia`,
-    description: project.description,
+    description: project.overview,
   };
 }
 
@@ -51,9 +51,9 @@ export default async function ProjectPage({
         <NavBar />
         <ProjectHeader
           title={project.title}
-          description={project.description}
+          description={project.overview}
           role={project.role}
-          projectType={project.projectType}
+          projectType={project.product}
           deliverables={project.deliverables}
           client={project.client}
         />
@@ -64,19 +64,19 @@ export default async function ProjectPage({
         <div className="xl:flex xl:items-start xl:gap-48">
           {/* Sections */}
           <div className="flex flex-col gap-14 md:gap-18 xl:gap-20 xl:flex-1">
-            {project.sections.map((section, i) => (
+            {project.process.map((section, i) => (
               <ProjectSection
                 key={i}
                 sectionId={slugify(section.title)}
                 title={section.title}
-                body={section.body}
+                body={section.description}
               />
             ))}
           </div>
 
           {/* Table of contents — xl only */}
           <TableOfContents
-            sections={project.sections.map((s) => ({
+            sections={project.process.map((s) => ({
               id: slugify(s.title),
               title: s.title,
             }))}
@@ -95,7 +95,7 @@ export default async function ProjectPage({
               <ProjectCard
                 key={p.id}
                 title={p.title}
-                description={p.description}
+                description={p.tagline}
                 company={p.client}
                 year={p.year}
                 image={p.image}
