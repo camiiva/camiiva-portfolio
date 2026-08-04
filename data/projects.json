@@ -131,5 +131,62 @@
         "description": "If I were to work on this project again, I think user testing and analytics would have been valuable to validate if the designs were solving user needs, but unfortunately, they were not feasible due to budget constraints."
       }
     ]
+  },
+  {
+    "id": "somos-internet",
+    "title": "Somos Internet",
+    "client": "Somos Internet",
+    "product": "Design System",
+    "category": "Case Study 03",
+    "tagline": "Building the design foundation Somos Internet never had",
+    "summary": "Somos Internet's digital products had drifted into inconsistency — duplicate buttons, dropdowns, and colors across apps, websites, and web apps. I audited, consolidated, and built a unified component library, then worked hands-on with a young in-house team to help them actually adopt it.",
+    "overview": "Somos Internet is a telecommunications company running multiple digital products — apps, websites, and web apps — with no unified design system behind them. The gaps showed up in the details: the same button existed in four slightly different styles, dropdowns varied in size and font across products, and the color palette had drifted into near-duplicates depending on which product you looked at. That inconsistency was slowing down both design and development, and making it harder for the products to feel like they belonged to the same company.",
+    "goal": "The Somos Internet team wanted a unified component library that could bring one consistent visual language across every product. This meant not just designing components, but consolidating years of drift — collapsing duplicate buttons, dropdowns, and color values into a single source of truth developers could actually build from.",
+    "role": "Senior Product Designer working as a solo freelance consultant, owning both strategy and execution of the design system",
+    "year": "2024",
+    "image": "/project-02.png",
+    "deliverables": ["Design System", "Component Library", "Design Audit", "Developer Handoff"],
+    "tags": ["Design System", "Component Library", "Telecommunications", "Consultancy"],
+    "process": [
+      {
+        "step": "01",
+        "title": "Understanding the problem",
+        "description": "Before designing anything, I audited what already existed. I reviewed each product's documentation and got access to test and production environments to see the components in context, not just in Figma files. The audit surfaced the real scope of the drift: the same button, dropdown, and color values existed in multiple variants across products, differing in color, font family, and size with no clear source of truth. That gave me a concrete list to prioritize rather than starting from a blank page."
+      },
+      {
+        "step": "02",
+        "title": "Defining the visual style",
+        "description": "Before touching components, I designed a handful of key screens to define and get sign-off on the visual direction. Getting alignment here first meant the component work that followed had a clear target instead of being negotiated component-by-component."
+      },
+      {
+        "step": "03",
+        "title": "Building the foundations",
+        "description": "With the direction approved, I established the core visual foundations: color palette, typography, and grid system. I also selected a pre-existing icon library that matched Somos' visual identity rather than building one from scratch, keeping the project focused on what actually needed custom work."
+      },
+      {
+        "step": "04",
+        "title": "Building the component library",
+        "description": "Using the audit as a priority list, I built the components in Figma, working closely with the development team to make sure every component was compatible with Tailwind CSS — the framework their products were actually built on. This wasn't a design exercise happening in isolation; every component was checked against what development could realistically implement."
+      },
+      {
+        "step": "05",
+        "title": "Handoff and developer adoption",
+        "description": "The biggest friction on this project wasn't visual, it was organizational: Somos' in-house designers were junior and just starting to work with product design, so there wasn't an existing visual practice to plug into, and the developers weren't used to working with custom or branded components. Handing off a Figma file alone wasn't going to be enough. So I ran several handoff and adoption sessions with the dev team to align on how the components should be used and gather feedback in the process. We also built a small local preview library, similar in spirit to Storybook, so developers could see and test components in isolation before wiring them into product — giving them a sandbox to get comfortable with the system rather than learning it live in production."
+      }
+    ],
+    "impact": [
+      {
+        "title": "Scalability for the future",
+        "description": "The design foundation this project put in place means Somos' products can grow while keeping a consistent, recognizable visual style. Standardizing the design language now gives them a system that can support future products and features without starting from scratch each time."
+      },
+      {
+        "title": "Unified and consistent UX",
+        "description": "The component library closed the gap between products that used to feel like they came from different companies. Consolidating duplicate buttons, dropdowns, and colors into one system made interactions more intuitive and familiar for users, and fixed usability issues that had been quietly accumulating."
+      },
+      {
+        "title": "Bridging the gap with a young team",
+        "description": "Because the in-house team was still early in building out a design practice, the real work wasn't just producing components — it was building the collaboration muscle between design and development from the ground up. If I did this again, I'd build in dedicated training time even earlier, since a junior team benefits as much from how to work with a design system as from the system itself."
+      }
+    ]
   }
 ]
