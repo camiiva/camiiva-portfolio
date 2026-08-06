@@ -1,10 +1,89 @@
 [
   {
+    "id": "study-document-assistant",
+    "title": "Study Document Assistant",
+    "client": "Evinova",
+    "product": "Web app",
+    "category": "Case Study 01",
+    "tagline": "Turning long study documents into fast, sourced answers",
+    "summary": "Study teams were drowning in questions about complex study documentation. I helped design and ship Evinova's first AI product — an assistant that searches study documents and returns fast, sourced answers — working solo within a lean four-person team from proof of concept to launch.",
+    "overview": "Study teams often received a flood of questions from sites about their study documentation, and answering them meant digging through long, complex documents to find the right information. That slowed down study execution and increased the risk of missing something important — the kind of friction that doesn't show up as a single incident, but adds up across every study a team runs.",
+    "goal": "Evinova wanted to build an AI Assistant that could help study teams get answers faster and more efficiently, without sacrificing reliability. The Assistant would search through the study documents managed by Study Managers and return fast, accurate, sourced answers.",
+    "role": "Senior UX Consultant working solo on design strategy and execution within a lean four-person team",
+    "year": "2025",
+    "image": "/project-02.png",
+    "deliverables": [
+      "UX/UI Design",
+      "Web App",
+      "AI Product Strategy",
+      "Information Architecture"
+    ],
+    "tags": [
+      "UX/UI",
+      "Web App",
+      "AI",
+      "Enterprise SaaS"
+    ],
+    "process": [
+      {
+        "step": "01",
+        "title": "Testing the hypothesis",
+        "description": "With AI adoption a company-wide push at Evinova, our team spotted an opportunity: an assistant that could answer questions about study documents faster and more reliably than manual search. Rather than commit resources upfront, we wanted to validate the idea fast. We built a quick, deliberately rough proof of concept and had the Data Science team run an unmoderated user test. The results confirmed real interest in the idea — enough to make the case for building it properly."
+      },
+      {
+        "step": "02",
+        "title": "Earning buy-in",
+        "description": "Confirmed interest wasn't enough on its own — the CTO was hesitant, and without a concrete design concept to point to, we were at risk of not getting the resources to move forward. So the PO and I put together a quick prototype, both to sharpen the experience beyond the PoC and to show a more scalable direction aligned with the business. Presenting that prototype to leadership and the dev team gave everyone shared clarity on what we were building, which also meant more accurate estimates and timelines. That got us the CTO's approval and the resources to build."
+      },
+      {
+        "step": "03",
+        "title": "Structuring access and navigation",
+        "description": "Study teams aren't one uniform user, so early on we defined our own set of product user roles — Study Managers, Study Members, and Site Staff — each needing different levels of access to study documentation depending on their study or site. That role matrix shaped nearly every other decision in the product: Study Managers manage documents and user access, Study Members view and query study documents, and Site Staff view and query only site-specific documents. The Assistant also needed to live inside Evinova's wider platform, not as a bolted-on tool. We built on the existing platform navigation header and added a left-nav component, giving us room to structure the Assistant's own navigation without breaking the ecosystem it sat in. We treated \"Study\" as the core object in the data model, with chats, documents, users, and general info as features hung off it — which let us cleanly enable or disable functionality per user role instead of hacking around permissions later."
+      },
+      {
+        "step": "04",
+        "title": "Building the AI-powered chat experience",
+        "description": "To keep document upload from becoming a manual data-entry chore, we built in AI processing that could read uploaded documents and structure their data automatically. That structuring is what made fast, accurate querying possible once users started chatting with the Assistant. For the chat itself, we gave users control over how targeted a search was, since not every study needed the Assistant searching across every document. Reliability mattered as much as speed here — users needed to be able to fact-check an answer, not just receive one. So we built a detailed \"Sources\" feature that shows exactly which documents an answer came from, with the option to preview the referenced section directly."
+      },
+      {
+        "step": "05",
+        "title": "Shipping in sprints",
+        "description": "There wasn't a single handoff moment on this project. The team worked in tight sprint cycles, and design, product, and engineering stayed in sync at the end of every sprint rather than design handing off a finished spec once at the end. That cadence, combined with how involved I stayed in technical and product ceremonies, meant fewer surprises for the dev team and faster iteration for everyone."
+      }
+    ],
+    "impact": [
+      {
+        "title": "Setting the AI precedent",
+        "description": "This was the first official AI product Evinova shipped to customers, which meant it set the tone — and the patterns — for how AI got built into other products across the company afterward. Being first meant more scrutiny, but also more say in what \"good\" looked like going forward.",
+        "metric": {
+          "value": "1st",
+          "label": "Official AI product shipped at Evinova"
+        }
+      },
+      {
+        "title": "Business impact",
+        "description": "Early CSAT results after launch were strong [INSERT METRICS HERE], and the product's value was clear enough that it helped close 2 contracts with major pharma clients.",
+        "metric": {
+          "value": "2",
+          "label": "Pharma contracts signed"
+        }
+      },
+      {
+        "title": "A lean team, closely involved",
+        "description": "Being a team of four — PO, Tech Lead, Developer, and me — could have been a resourcing constraint, but it forced a tighter working relationship and faster alignment than a larger team might have had. I stayed closely involved in technical and product conversations throughout, not just design ones — working in isolation on a project like this would have meant losing the shared context the team needed to move fast, and that involvement is what let us estimate faster, fail quickly, and make decisions together instead of in sequence.",
+        "metric": {
+          "value": "4",
+          "label": "Person team"
+        }
+      }
+    ]
+  },
+  {
     "id": "nicolette",
     "title": "Nicolette",
     "client": "Nicolette",
     "product": "Mobile app",
-    "category": "Case Study 01",
+    "category": "Case Study 02",
     "tagline": "Helping parents feel empowered on their baby's health journey",
     "summary": "Nicolette helps parents of NICU babies understand complex medical data and stay involved in their child's care. We expanded their existing app from hospital-only tablets to mobile, so parents could access it anywhere — inside or outside the hospital.",
     "overview": "Nicolette is a company that creates empowerment applications for patients fighting acute health battles. They realized that it's hard for parents to understand complex medical data about their babies in the NICU, given the stressful situation they're in. They had an existing app called NicoBoard that simplified medical information to empower parents to have a say in their child's medical decisions. But there was a catch: the app was only available on hospital tablets and parents could not access it outside the hospital.",
@@ -12,8 +91,19 @@
     "role": "Senior Product Designer in charge of both strategy and execution of design in this project",
     "year": "2022",
     "image": "/project-02.png",
-    "deliverables": ["UX/UI Design", "Mobile App", "Design System", "Branding"],
-    "tags": ["UX/UI", "Mobile App", "Healthcare", "Design System", "Branding"],
+    "deliverables": [
+      "UX/UI Design",
+      "Mobile App",
+      "Design System",
+      "Branding"
+    ],
+    "tags": [
+      "UX/UI",
+      "Mobile App",
+      "Healthcare",
+      "Design System",
+      "Branding"
+    ],
     "process": [
       {
         "step": "01",
@@ -71,7 +161,7 @@
     "title": "Jombine",
     "client": "Jombine",
     "product": "Web app",
-    "category": "Case Study 02",
+    "category": "Case Study 03",
     "tagline": "Join our hiring revolution",
     "summary": "Jombine set out to fix a broken hiring process — one that's costly for small companies and reductive for candidates. We designed a platform that lets employers find the right people and candidates showcase who they really are, beyond a resume.",
     "overview": "Jombine was a product idea aiming to revolutionize the hiring process for both employers and candidates. Small and medium-sized companies struggle with expensive, time-consuming and ineffective hiring processes while candidates find it frustrating to present themselves only through resumes. This traditional format fails to showcase their career goals, values, and ambitions.",
@@ -79,8 +169,21 @@
     "role": "I led the design and creative process of the project from start to finish. In addition to overseeing the strategy and execution of design tasks. ",
     "year": "2023",
     "image": "/project-02.png",
-    "deliverables": ["UX/UI Design", "Web App", "Design System", "Branding", "Marketing Website"],
-    "tags": ["UX/UI", "Web App", "SaaS", "Design System", "Branding", "Marketing Website"],
+    "deliverables": [
+      "UX/UI Design",
+      "Web App",
+      "Design System",
+      "Branding",
+      "Marketing Website"
+    ],
+    "tags": [
+      "UX/UI",
+      "Web App",
+      "SaaS",
+      "Design System",
+      "Branding",
+      "Marketing Website"
+    ],
     "process": [
       {
         "step": "01",
@@ -137,7 +240,7 @@
     "title": "Somos Internet",
     "client": "Somos Internet",
     "product": "Design System",
-    "category": "Case Study 03",
+    "category": "Case Study 04",
     "tagline": "Building the design foundation Somos Internet never had",
     "summary": "Somos Internet's digital products had drifted into inconsistency — duplicate buttons, dropdowns, and colors across apps, websites, and web apps. I audited, consolidated, and built a unified component library, then worked hands-on with a young in-house team to help them actually adopt it.",
     "overview": "Somos Internet is a telecommunications company running multiple digital products — apps, websites, and web apps — with no unified design system behind them. The gaps showed up in the details: the same button existed in four slightly different styles, dropdowns varied in size and font across products, and the color palette had drifted into near-duplicates depending on which product you looked at. That inconsistency was slowing down both design and development, and making it harder for the products to feel like they belonged to the same company.",
@@ -145,8 +248,18 @@
     "role": "Senior Product Designer working as a solo freelance consultant, owning both strategy and execution of the design system",
     "year": "2024",
     "image": "/project-02.png",
-    "deliverables": ["Design System", "Component Library", "Design Audit", "Developer Handoff"],
-    "tags": ["Design System", "Component Library", "Telecommunications", "Consultancy"],
+    "deliverables": [
+      "Design System",
+      "Component Library",
+      "Design Audit",
+      "Developer Handoff"
+    ],
+    "tags": [
+      "Design System",
+      "Component Library",
+      "Telecommunications",
+      "Consultancy"
+    ],
     "process": [
       {
         "step": "01",
@@ -177,15 +290,27 @@
     "impact": [
       {
         "title": "Scalability for the future",
-        "description": "The design foundation this project put in place means Somos' products can grow while keeping a consistent, recognizable visual style. Standardizing the design language now gives them a system that can support future products and features without starting from scratch each time."
+        "description": "The design foundation this project put in place means Somos' products can grow while keeping a consistent, recognizable visual style. Standardizing the design language now gives them a system that can support future products and features without starting from scratch each time.",
+        "metric": {
+          "value": "12",
+          "label": "Reusable components shipped"
+        }
       },
       {
         "title": "Unified and consistent UX",
-        "description": "The component library closed the gap between products that used to feel like they came from different companies. Consolidating duplicate buttons, dropdowns, and colors into one system made interactions more intuitive and familiar for users, and fixed usability issues that had been quietly accumulating."
+        "description": "The component library closed the gap between products that used to feel like they came from different companies. Consolidating duplicate buttons, dropdowns, and colors into one system made interactions more intuitive and familiar for users, and fixed usability issues that had been quietly accumulating.",
+        "metric": {
+          "value": "80%",
+          "label": "Reduction in duplicate UI patterns"
+        }
       },
       {
         "title": "Bridging the gap with a young team",
-        "description": "Because the in-house team was still early in building out a design practice, the real work wasn't just producing components — it was building the collaboration muscle between design and development from the ground up. If I did this again, I'd build in dedicated training time even earlier, since a junior team benefits as much from how to work with a design system as from the system itself."
+        "description": "Because the in-house team was still early in building out a design practice, the real work wasn't just producing components — it was building the collaboration muscle between design and development from the ground up. If I did this again, I'd build in dedicated training time even earlier, since a junior team benefits as much from how to work with a design system as from the system itself.",
+        "metric": {
+          "value": "5",
+          "label": "Hands-on adoption sessions run"
+        }
       }
     ]
   }

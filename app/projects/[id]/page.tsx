@@ -6,6 +6,7 @@ import ProjectCard from "@/app/components/ProjectCard";
 import CursorGlow from "@/app/components/CursorGlow";
 import ProjectHeader from "@/app/components/ProjectHeader";
 import ProjectSection from "@/app/components/ProjectSection";
+import ProjectImpact from "@/app/components/ProjectImpact";
 import projects from "@/data/projects.json";
 
 function slugify(text: string) {
@@ -42,6 +43,10 @@ export default async function ProjectPage({
 
   const otherProjects = projects.filter((p) => p.id !== id);
 
+  const impactSection = project.impact?.length
+    ? { id: "impact-and-learnings", title: "Impact and learnings" }
+    : null;
+
   return (
     <div className="min-h-screen bg-content-bg md:cursor-none">
       <CursorGlow />
@@ -72,14 +77,25 @@ export default async function ProjectPage({
                 body={section.description}
               />
             ))}
+
+            {impactSection && (
+              <ProjectImpact
+                sectionId={impactSection.id}
+                title={impactSection.title}
+                items={project.impact}
+              />
+            )}
           </div>
 
           {/* Table of contents — xl only */}
           <TableOfContents
-            sections={project.process.map((s) => ({
-              id: slugify(s.title),
-              title: s.title,
-            }))}
+            sections={[
+              ...project.process.map((s) => ({
+                id: slugify(s.title),
+                title: s.title,
+              })),
+              ...(impactSection ? [impactSection] : []),
+            ]}
           />
         </div>
       </main>
