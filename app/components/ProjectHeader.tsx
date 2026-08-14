@@ -14,20 +14,18 @@ function animStyle(visible: boolean, delay: number) {
 
 interface ProjectHeaderProps {
   title: string;
-  description: string;
-  role: string;
   projectType: string;
   deliverables: string[];
   client: string;
+  year: string;
 }
 
 export default function ProjectHeader({
   title,
-  description,
-  role,
   projectType,
   deliverables,
   client,
+  year,
 }: ProjectHeaderProps) {
   const [mounted, setMounted] = useState(false);
 
@@ -35,6 +33,13 @@ export default function ProjectHeader({
     const id = requestAnimationFrame(() => setMounted(true));
     return () => cancelAnimationFrame(id);
   }, []);
+
+  const tags = [
+    projectType,
+    ...deliverables.filter(
+      (d) => d.trim().toLowerCase() !== projectType.trim().toLowerCase()
+    ),
+  ];
 
   return (
     <div className="container-page pt-8 pb-14 md:pt-10 md:pb-16 xl:pt-12 xl:pb-26">
@@ -47,27 +52,29 @@ export default function ProjectHeader({
         ← Back
       </a>
 
-      {/* Title */}
-      <h1
-        className="mb-6 font-heading text-[36px] font-bold leading-[1.1] tracking-[-0.64px] md:mb-8 md:text-[48px] xl:mb-6 xl:text-[64px]"
-        style={animStyle(mounted, 100)}
-      >
-        {title}
-      </h1>
+      <div className="xl:max-w-[885px]">
+        {/* Title + client/year metadata */}
+        <div className="mb-8 flex flex-col gap-3 md:mb-10 md:gap-4" style={animStyle(mounted, 100)}>
+          <h1 className="font-heading text-[36px] font-bold leading-[1.1] tracking-[-0.64px] md:text-[48px] xl:text-[64px]">
+            {title}
+          </h1>
+          <div className="flex items-center gap-2 font-heading text-[16px] font-medium uppercase leading-[1.4] tracking-[1.28px] text-meta">
+            <span>Client: {client}</span>
+            <span>·</span>
+            <span>{year}</span>
+          </div>
+        </div>
 
-      {/* Description + metadata */}
-      <div
-        className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between md:gap-48 xl:justify-start"
-        style={animStyle(mounted, 200)}
-      >
-        <p className="font-body text-base leading-[1.4] text-white md:text-[20px] xl:flex-1">
-          {description}
-        </p>
-        <div className="shrink-0 font-body text-base leading-[1.6] text-white md:w-[260px] md:text-[20px] xl:w-[360px]">
-          <p>My role: {role}</p>
-          <p>Project type: {projectType}</p>
-          <p>Deliverables: {deliverables.join(", ")}</p>
-          <p>Client: {client}</p>
+        {/* Metadata tags */}
+        <div className="flex flex-wrap gap-2" style={animStyle(mounted, 200)}>
+          {tags.map((tag, i) => (
+            <span
+              key={`${tag}-${i}`}
+              className="inline-flex items-center rounded-pill bg-surface px-4 py-2 font-body text-sm font-medium leading-[1.4] text-accent md:text-base"
+            >
+              {tag}
+            </span>
+          ))}
         </div>
       </div>
     </div>

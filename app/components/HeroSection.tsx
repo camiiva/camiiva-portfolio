@@ -67,7 +67,7 @@ export default function HeroSection() {
       <div className="container-page">
         <section
           ref={sectionRef}
-          className="flex flex-col gap-10 rounded-3xl bg-linear-to-b from-surface to-bg px-4 py-8 md:flex-row md:items-center md:gap-10 md:rounded-4xl md:p-10 xl:gap-14 xl:rounded-[48px] xl:p-40"
+          className="flex flex-col gap-10 rounded-3xl bg-linear-to-b from-surface to-bg px-4 py-12 md:flex-row md:items-center md:gap-10 md:rounded-4xl md:px-10 md:py-16 xl:gap-14 xl:rounded-[48px] xl:px-40 xl:py-52"
         >
           {/* Profile photo — tilts on cursor */}
           <div

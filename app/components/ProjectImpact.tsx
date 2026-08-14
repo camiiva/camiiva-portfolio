@@ -17,9 +17,15 @@ interface ProjectImpactProps {
   items: ImpactItem[];
 }
 
+const GRID_COLS_CLASS: Record<number, string> = {
+  1: "sm:grid-cols-1 xl:grid-cols-1",
+  2: "sm:grid-cols-2 xl:grid-cols-2",
+};
+
 export default function ProjectImpact({ sectionId, title, items }: ProjectImpactProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
+  const gridColsClass = GRID_COLS_CLASS[items.length] ?? "sm:grid-cols-2 xl:grid-cols-3";
 
   useEffect(() => {
     const el = ref.current;
@@ -52,7 +58,7 @@ export default function ProjectImpact({ sectionId, title, items }: ProjectImpact
       <h2 className="mb-8 font-heading text-[22px] font-bold leading-[1.4] text-content-text md:mb-10 md:text-[28px] xl:text-[32px]">
         {title}
       </h2>
-      <div className="grid grid-cols-1 border-r border-b border-content-border sm:grid-cols-2 xl:grid-cols-3 xl:max-w-[1106px]">
+      <div className={`grid grid-cols-1 border-r border-b border-content-border xl:max-w-[1106px] ${gridColsClass}`}>
         {items.map((item) => (
           <div
             key={item.title}

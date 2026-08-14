@@ -7,6 +7,7 @@ import CursorGlow from "@/app/components/CursorGlow";
 import ProjectHeader from "@/app/components/ProjectHeader";
 import ProjectSection from "@/app/components/ProjectSection";
 import ProjectImpact from "@/app/components/ProjectImpact";
+import HighlightText from "@/app/components/HighlightText";
 import projects from "@/data/projects.json";
 
 function slugify(text: string) {
@@ -56,40 +57,53 @@ export default async function ProjectPage({
         <NavBar />
         <ProjectHeader
           title={project.title}
-          description={project.overview}
-          role={project.role}
           projectType={project.product}
           deliverables={project.deliverables}
           client={project.client}
+          year={project.year}
         />
       </header>
 
       {/* ── Light content area ───────────────────────────────── */}
       <main className="container-page py-12 md:py-16 xl:py-20">
         <div className="xl:flex xl:items-start xl:gap-48">
-          {/* Sections */}
-          <div className="flex flex-col gap-14 md:gap-18 xl:gap-20 xl:flex-1">
-            {project.process.map((section, i) => (
-              <ProjectSection
-                key={i}
-                sectionId={slugify(section.title)}
-                title={section.title}
-                body={section.description}
-              />
-            ))}
+          <div className="xl:flex-1">
+            {/* Problem statement + goal intro */}
+            <div id="intro" className="mb-14 md:mb-18 xl:mb-20 xl:max-w-[885px]">
+              <div className="flex flex-col gap-6 font-heading text-[20px] font-bold leading-[1.3] text-content-text md:text-[24px]">
+                <p>{project.overview}</p>
+                <p>
+                  <HighlightText text={project.goal} />
+                </p>
+              </div>
+              <div className="mt-10 border-t-2 border-dotted border-content-border md:mt-12" />
+            </div>
 
-            {impactSection && (
-              <ProjectImpact
-                sectionId={impactSection.id}
-                title={impactSection.title}
-                items={project.impact}
-              />
-            )}
+            {/* Sections */}
+            <div className="flex flex-col gap-14 md:gap-18 xl:gap-20">
+              {project.process.map((section, i) => (
+                <ProjectSection
+                  key={i}
+                  sectionId={slugify(section.title)}
+                  title={section.title}
+                  body={section.description}
+                />
+              ))}
+
+              {impactSection && (
+                <ProjectImpact
+                  sectionId={impactSection.id}
+                  title={impactSection.title}
+                  items={project.impact}
+                />
+              )}
+            </div>
           </div>
 
           {/* Table of contents — xl only */}
           <TableOfContents
             sections={[
+              { id: "intro", title: "Intro" },
               ...project.process.map((s) => ({
                 id: slugify(s.title),
                 title: s.title,

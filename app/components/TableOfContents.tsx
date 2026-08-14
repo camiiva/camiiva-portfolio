@@ -54,9 +54,6 @@ export default function TableOfContents({ sections }: { sections: Section[] }) {
         mounted ? "opacity-100" : "opacity-0"
       }`}
     >
-      <p className="mb-4 font-heading text-md font-medium uppercase tracking-[2px] text-content-text opacity-60">
-        Contents
-      </p>
       <ul className="flex flex-col">
         {sections.map(({ id, title }) => {
           const isActive = activeId === id;

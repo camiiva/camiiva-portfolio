@@ -1,14 +1,82 @@
 [
   {
-    "id": "study-document-assistant",
-    "title": "Study Document Assistant",
+    "id": "evie",
+    "title": "Building Evinova's Agentic Assistant 'Evie'",
     "client": "Evinova",
     "product": "Web app",
     "category": "Case Study 01",
+    "tagline": "One assistant to orchestrate every Evinova AI workflow",
+    "summary": "Evinova's AI tools were siloed, each scoped to a single task, forcing users to bridge the gaps themselves. I'm designing Evie, the central AI interface that orchestrates every Evinova assistant and agent through one consistent experience. Design phase is complete, development is next.",
+    "overview": "Evinova's AI tools were siloed, each scoped to a single task, forcing users to manually bridge the gaps themselves and leading to a steeper learning curve and inconsistent quality. As AI assistants evolved toward agentic functionality, we needed to define a next-generation Assistant that could scale across every product instead of staying siloed.",
+    "goal": "The Evinova team wanted Evie to ==become the central AI-powered interface and orchestrator== for all of Evinova's assistants and agents, combining a single UX with multi-agent orchestration and enterprise-grade governance.",
+    "role": "Senior UX Consultant working under the supervision of my Design Lead",
+    "year": "2026",
+    "image": "/project-02.png",
+    "deliverables": [
+      "UX/UI Design",
+      "Web App",
+      "AI Product Strategy",
+      "Conversational Design"
+    ],
+    "tags": [
+      "UX/UI",
+      "Web App",
+      "AI",
+      "Enterprise SaaS"
+    ],
+    "process": [
+      {
+        "step": "01",
+        "title": "Access point and navigation",
+        "description": "We couldn't modify our existing products' UI directly, so the first design challenge was figuring out how users would access and navigate the Assistant without touching any of that. We landed on an overlay pattern that sits above the main UI, triggered by a floating button in the bottom-right corner, with support for multiple view modes: floating, sidebar, and fullscreen (out of scope for now), so users could choose whatever fit their workflow best."
+      },
+      {
+        "step": "02",
+        "title": "Establishing the baseline experience",
+        "description": "Evie is a clinical-trial-specific assistant, but a lot of its interaction patterns are shared across any AI agent or chatbot: things like the empty state, chat detail, chat menu, context handling, and how it shows its \"thinking\" and reasoning. I wanted a solid baseline in place before designing anything industry-specific, so those foundational patterns could support study-specific use cases later without needing to be reworked for consistency."
+      },
+      {
+        "step": "03",
+        "title": "Defining agents and modes",
+        "description": "With navigation and baseline states in place, we moved into the features that were specific to Evinova's industry and product. Agents were one of them: specialized helpers that could perform tasks depending on a user's role or where they were in the clinical study lifecycle, from querying study documents to extracting document data to building study exports for governance meetings. Modes were the other: each one shapes how the Assistant responds and what kind of output it produces, and users could either pick a specific mode or select \"Auto\" and let the Assistant decide."
+      },
+      {
+        "step": "04",
+        "title": "Adding references",
+        "description": "Our products deal with several different object types tied to a study: studies, study options, study documents, page links. We needed a way to reference them directly inside the chat to get more accurate, targeted results. We added a global search that let users look up any object type, each visually differentiated with iconography and color so people could recognize what they were browsing before selecting it."
+      },
+      {
+        "step": "05",
+        "title": "Building in guardrails",
+        "description": "Guardrails are easy to overlook but mattered a lot here: how the Assistant handles requests it shouldn't act on. Mapping every possible use case wasn't realistic, given how many different questions and requests users could throw at it. So instead we classified guardrail types and built a simple, scalable framework for structuring the Assistant's responses in those situations, backed by 2 to 3 concrete examples to show how it should look in practice."
+      },
+      {
+        "step": "06",
+        "title": "Mapping study-specific use cases",
+        "description": "Once the baseline experience and interaction patterns felt solid, we mapped out the study-specific use cases that were already common among users, like comparing study options or asking questions about a study and its options, and designed for those directly."
+      }
+    ],
+    "impact": [
+      {
+        "title": "Wrapping up design",
+        "description": "We just wrapped the design phase for Evie and are now assessing and estimating the development work, which is set to kick off in the coming months. There's no shipped outcome to report yet, this case study will get an update once it's live."
+      },
+      {
+        "title": "How fast AI patterns move",
+        "description": "Working on two different Evinova AI assistants, Study Document Assistant and now Evie, in a short stretch of time made it clear how quickly interaction patterns change when they're tied to AI. What felt like a solid baseline pattern a few months earlier could already feel dated by the next project, which means staying current isn't optional if you're designing in this space."
+      }
+    ]
+  },
+  {
+    "id": "study-document-assistant",
+    "title": "Designing Evinova's First AI-Powered Assistant",
+    "client": "Evinova",
+    "product": "Web app",
+    "category": "Case Study 02",
     "tagline": "Turning long study documents into fast, sourced answers",
-    "summary": "Study teams were drowning in questions about complex study documentation. I helped design and ship Evinova's first AI product — an assistant that searches study documents and returns fast, sourced answers — working solo within a lean four-person team from proof of concept to launch.",
-    "overview": "Study teams often received a flood of questions from sites about their study documentation, and answering them meant digging through long, complex documents to find the right information. That slowed down study execution and increased the risk of missing something important — the kind of friction that doesn't show up as a single incident, but adds up across every study a team runs.",
-    "goal": "Evinova wanted to build an AI Assistant that could help study teams get answers faster and more efficiently, without sacrificing reliability. The Assistant would search through the study documents managed by Study Managers and return fast, accurate, sourced answers.",
+    "summary": "Study teams were drowning in questions about complex study documentation. I helped design and ship Evinova's first AI product, an assistant that searches study documents and returns fast, sourced answers, working solo within a lean four-person team from proof of concept to launch.",
+    "overview": "Study teams were flooded with questions about their study documentation, and answering them meant digging through long, complex documents to find the right information. That slowed down study execution and risked missing something important.",
+    "goal": "Evinova wanted an AI Assistant that could search study documents and return ==fast, accurate, sourced answers==, without sacrificing reliability.",
     "role": "Senior UX Consultant working solo on design strategy and execution within a lean four-person team",
     "year": "2025",
     "image": "/project-02.png",
@@ -28,22 +96,22 @@
       {
         "step": "01",
         "title": "Testing the hypothesis",
-        "description": "With AI adoption a company-wide push at Evinova, our team spotted an opportunity: an assistant that could answer questions about study documents faster and more reliably than manual search. Rather than commit resources upfront, we wanted to validate the idea fast. We built a quick, deliberately rough proof of concept and had the Data Science team run an unmoderated user test. The results confirmed real interest in the idea — enough to make the case for building it properly."
+        "description": "With AI adoption a company-wide push at Evinova, our team spotted an opportunity: an assistant that could answer questions about study documents faster and more reliably than manual search. Rather than commit resources upfront, we wanted to validate the idea fast. We built a quick, deliberately rough proof of concept and had the Data Science team run an unmoderated user test. The results confirmed real interest in the idea, enough to make the case for building it properly."
       },
       {
         "step": "02",
         "title": "Earning buy-in",
-        "description": "Confirmed interest wasn't enough on its own — the CTO was hesitant, and without a concrete design concept to point to, we were at risk of not getting the resources to move forward. So the PO and I put together a quick prototype, both to sharpen the experience beyond the PoC and to show a more scalable direction aligned with the business. Presenting that prototype to leadership and the dev team gave everyone shared clarity on what we were building, which also meant more accurate estimates and timelines. That got us the CTO's approval and the resources to build."
+        "description": "Confirmed interest wasn't enough on its own: the CTO was hesitant, and without a concrete design concept to point to, we were at risk of not getting the resources to move forward. So the PO and I put together a quick prototype, both to sharpen the experience beyond the PoC and to show a more scalable direction aligned with the business. Presenting that prototype to leadership and the dev team gave everyone shared clarity on what we were building, which also meant more accurate estimates and timelines. That got us the CTO's approval and the resources to build."
       },
       {
         "step": "03",
         "title": "Structuring access and navigation",
-        "description": "Study teams aren't one uniform user, so early on we defined our own set of product user roles — Study Managers, Study Members, and Site Staff — each needing different levels of access to study documentation depending on their study or site. That role matrix shaped nearly every other decision in the product: Study Managers manage documents and user access, Study Members view and query study documents, and Site Staff view and query only site-specific documents. The Assistant also needed to live inside Evinova's wider platform, not as a bolted-on tool. We built on the existing platform navigation header and added a left-nav component, giving us room to structure the Assistant's own navigation without breaking the ecosystem it sat in. We treated \"Study\" as the core object in the data model, with chats, documents, users, and general info as features hung off it — which let us cleanly enable or disable functionality per user role instead of hacking around permissions later."
+        "description": "Study teams aren't one uniform user, so early on we defined our own set of product user roles (Study Managers, Study Members, and Site Staff), each needing different levels of access to study documentation depending on their study or site. That role matrix shaped nearly every other decision in the product: Study Managers manage documents and user access, Study Members view and query study documents, and Site Staff view and query only site-specific documents.\n\nThe Assistant also needed to live inside Evinova's wider platform, not as a bolted-on tool. We built on the existing platform navigation header and added a left-nav component, giving us room to structure the Assistant's own navigation without breaking the ecosystem it sat in. We treated \"Study\" as the core object in the data model, with chats, documents, users, and general info as features hung off it, which let us cleanly enable or disable functionality per user role instead of hacking around permissions later."
       },
       {
         "step": "04",
         "title": "Building the AI-powered chat experience",
-        "description": "To keep document upload from becoming a manual data-entry chore, we built in AI processing that could read uploaded documents and structure their data automatically. That structuring is what made fast, accurate querying possible once users started chatting with the Assistant. For the chat itself, we gave users control over how targeted a search was, since not every study needed the Assistant searching across every document. Reliability mattered as much as speed here — users needed to be able to fact-check an answer, not just receive one. So we built a detailed \"Sources\" feature that shows exactly which documents an answer came from, with the option to preview the referenced section directly."
+        "description": "To keep document upload from becoming a manual data-entry chore, we built in AI processing that could read uploaded documents and structure their data automatically. That structuring is what made fast, accurate querying possible once users started chatting with the Assistant. For the chat itself, we gave users control over how targeted a search was, since not every study needed the Assistant searching across every document.\n\nReliability mattered as much as speed here: users needed to be able to fact-check an answer, not just receive one. So we built a detailed \"Sources\" feature that shows exactly which documents an answer came from, with the option to preview the referenced section directly."
       },
       {
         "step": "05",
@@ -54,7 +122,7 @@
     "impact": [
       {
         "title": "Setting the AI precedent",
-        "description": "This was the first official AI product Evinova shipped to customers, which meant it set the tone — and the patterns — for how AI got built into other products across the company afterward. Being first meant more scrutiny, but also more say in what \"good\" looked like going forward.",
+        "description": "This was the first official AI product Evinova shipped to customers, which meant it set the tone (and the patterns) for how AI got built into other products across the company afterward. Being first meant more scrutiny, but also more say in what \"good\" looked like going forward.",
         "metric": {
           "value": "1st",
           "label": "Official AI product shipped at Evinova"
@@ -70,7 +138,7 @@
       },
       {
         "title": "A lean team, closely involved",
-        "description": "Being a team of four — PO, Tech Lead, Developer, and me — could have been a resourcing constraint, but it forced a tighter working relationship and faster alignment than a larger team might have had. I stayed closely involved in technical and product conversations throughout, not just design ones — working in isolation on a project like this would have meant losing the shared context the team needed to move fast, and that involvement is what let us estimate faster, fail quickly, and make decisions together instead of in sequence.",
+        "description": "Being a team of four (PO, Tech Lead, Developer, and me) could have been a resourcing constraint, but it forced a tighter working relationship and faster alignment than a larger team might have had. I stayed closely involved in technical and product conversations throughout, not just design ones, working in isolation on a project like this would have meant losing the shared context the team needed to move fast, and that involvement is what let us estimate faster, fail quickly, and make decisions together instead of in sequence.",
         "metric": {
           "value": "4",
           "label": "Person team"
@@ -80,14 +148,14 @@
   },
   {
     "id": "nicolette",
-    "title": "Nicolette",
+    "title": "Bringing Nicolette's NICU Support App to Mobile",
     "client": "Nicolette",
     "product": "Mobile app",
-    "category": "Case Study 02",
+    "category": "Case Study 03",
     "tagline": "Helping parents feel empowered on their baby's health journey",
-    "summary": "Nicolette helps parents of NICU babies understand complex medical data and stay involved in their child's care. We expanded their existing app from hospital-only tablets to mobile, so parents could access it anywhere — inside or outside the hospital.",
-    "overview": "Nicolette is a company that creates empowerment applications for patients fighting acute health battles. They realized that it's hard for parents to understand complex medical data about their babies in the NICU, given the stressful situation they're in. They had an existing app called NicoBoard that simplified medical information to empower parents to have a say in their child's medical decisions. But there was a catch: the app was only available on hospital tablets and parents could not access it outside the hospital.",
-    "goal": "The Nicolette team wanted to make their app more accessible to parents of babies in the NICU by expanding it to mobile devices. This meant that parents could use the app both inside and outside the hospital.",
+    "summary": "Nicolette helps parents of NICU babies understand complex medical data and stay involved in their child's care. We expanded their existing app from hospital-only tablets to mobile, so parents could access it anywhere, inside or outside the hospital.",
+    "overview": "Nicolette creates empowerment apps for patients fighting acute health battles. Their existing app, NicoBoard, simplified complex medical data so parents of NICU babies could have a say in their child's care, but it only worked on hospital tablets, with no access outside the hospital.",
+    "goal": "The Nicolette team wanted to make their app more accessible by expanding it to mobile, so parents could use it ==both inside and outside the hospital==.",
     "role": "Senior Product Designer in charge of both strategy and execution of design in this project",
     "year": "2022",
     "image": "/project-02.png",
@@ -118,7 +186,7 @@
       {
         "step": "03",
         "title": "Building up a new brand style",
-        "description": "We got the opportunity to re-brand the current visual style since it wasn't actually reflecting the product vision and values. We brainstormed and experimented with different ideas until we finally settled on a concept that we all loved. We wanted the new visual style to be all about empowering and giving confidence to parents. The new visual style aimed to showcase the product's ability to connect parents to their baby's health journey in a meaningful way. We went back to the original palette of NicoBoard and updated it with bold and vibrant colors that would resonate with the target audience. This refresh not only modernized the visual identity but also conveyed a sense of energy and optimism."
+        "description": "We got the opportunity to re-brand the current visual style since it wasn't actually reflecting the product vision and values. We brainstormed and experimented with different ideas until we finally settled on a concept that we all loved. We wanted the new visual style to be all about empowering and giving confidence to parents.\n\nThe new visual style aimed to showcase the product's ability to connect parents to their baby's health journey in a meaningful way. We went back to the original palette of NicoBoard and updated it with bold and vibrant colors that would resonate with the target audience. This refresh not only modernized the visual identity but also conveyed a sense of energy and optimism."
       },
       {
         "step": "04",
@@ -128,12 +196,12 @@
       {
         "step": "05",
         "title": "Crafting the app",
-        "description": "We collaborated with the client to understand their needs and make the medical data more digestible and engaging for parents. We transformed the charts into an interactive experience, enabling users to get detailed information about their baby's health, creating an intuitive and informative user experience. Our design team was up for the challenge of creating a dynamic app that required flexible designs. We knew that we needed to think outside the box to create something that could adapt to changing content while highlighting essential health information. With a lot of experimentation, we crafted designs that were as flexible as they were visually stunning."
+        "description": "We collaborated with the client to understand their needs and make the medical data more digestible and engaging for parents. We transformed the charts into an interactive experience, enabling users to get detailed information about their baby's health, creating an intuitive and informative user experience.\n\nOur design team was up for the challenge of creating a dynamic app that required flexible designs. We knew that we needed to think outside the box to create something that could adapt to changing content while highlighting essential health information. With a lot of experimentation, we crafted designs that were as flexible as they were visually stunning."
       },
       {
         "step": "06",
         "title": "Prototyping and user testing",
-        "description": "Once we agreed on the direction for the product with the client, we conducted user testing to validate our ideas and improve the user experience for parents. Using an online tool called PlaybookUX, we created a prototype and a script to guide the testing process. We observed 10 real users interacting with our app and gathered valuable feedback on how they used it and what they found important. This feedback helped us improve the presentation of medical data and the visibility of chart interactivity. Armed with this feedback, we refined the user experience to create a product that better meets the needs of parents."
+        "description": "Once we agreed on the direction for the product with the client, we conducted user testing to validate our ideas and improve the user experience for parents. Using an online tool called PlaybookUX, we created a prototype and a script to guide the testing process.\n\nWe observed 10 real users interacting with our app and gathered valuable feedback on how they used it and what they found important. This feedback helped us improve the presentation of medical data and the visibility of chart interactivity. Armed with this feedback, we refined the user experience to create a product that better meets the needs of parents."
       },
       {
         "step": "07",
@@ -158,14 +226,14 @@
   },
   {
     "id": "jombine",
-    "title": "Jombine",
+    "title": "Building Jombine's Hiring Revolution",
     "client": "Jombine",
     "product": "Web app",
-    "category": "Case Study 03",
+    "category": "Case Study 04",
     "tagline": "Join our hiring revolution",
-    "summary": "Jombine set out to fix a broken hiring process — one that's costly for small companies and reductive for candidates. We designed a platform that lets employers find the right people and candidates showcase who they really are, beyond a resume.",
-    "overview": "Jombine was a product idea aiming to revolutionize the hiring process for both employers and candidates. Small and medium-sized companies struggle with expensive, time-consuming and ineffective hiring processes while candidates find it frustrating to present themselves only through resumes. This traditional format fails to showcase their career goals, values, and ambitions.",
-    "goal": "The Jombine team was looking to bring their product vision to life, with a digital experience that could allow employers and candidates to get connected and optimize the hiring process.",
+    "summary": "Jombine set out to fix a broken hiring process, one that's costly for small companies and reductive for candidates. We designed a platform that lets employers find the right people and candidates showcase who they really are, beyond a resume.",
+    "overview": "Jombine set out to revolutionize hiring for employers and candidates. Small and medium-sized companies struggle with expensive, ineffective hiring processes, while resumes alone fail to showcase a candidate's goals, values, and ambitions.",
+    "goal": "The Jombine team wanted a digital experience where employers and candidates could ==connect and optimize the hiring process==.",
     "role": "I led the design and creative process of the project from start to finish. In addition to overseeing the strategy and execution of design tasks. ",
     "year": "2023",
     "image": "/project-02.png",
@@ -193,7 +261,7 @@
       {
         "step": "02",
         "title": "Building up a new brand style",
-        "description": "We teamed up with Jombine to refresh their visual brand style. With no existing foundation, we took the opportunity to brainstorm fresh ideas and create a brand identity that aligned with their product vision. We explored and developed concepts for Jombine's visual identity, taking inspiration from the NFL's 'Combine' recruiting process. The NFL strategy chalkboard was a crucial reference for our product visuals. Our goal was to visually represent Jombine's mission of creating the perfect match between candidates and companies. We experimented with color palettes, typography, and graphic elements to create a cohesive brand style."
+        "description": "We teamed up with Jombine to refresh their visual brand style. With no existing foundation, we took the opportunity to brainstorm fresh ideas and create a brand identity that aligned with their product vision. We explored and developed concepts for Jombine's visual identity, taking inspiration from the NFL's 'Combine' recruiting process.\n\nThe NFL strategy chalkboard was a crucial reference for our product visuals. Our goal was to visually represent Jombine's mission of creating the perfect match between candidates and companies. We experimented with color palettes, typography, and graphic elements to create a cohesive brand style."
       },
       {
         "step": "03",
@@ -237,14 +305,14 @@
   },
   {
     "id": "somos-internet",
-    "title": "Somos Internet",
+    "title": "Building the Design System Somos Internet Never Had",
     "client": "Somos Internet",
     "product": "Design System",
-    "category": "Case Study 04",
+    "category": "Case Study 05",
     "tagline": "Building the design foundation Somos Internet never had",
-    "summary": "Somos Internet's digital products had drifted into inconsistency — duplicate buttons, dropdowns, and colors across apps, websites, and web apps. I audited, consolidated, and built a unified component library, then worked hands-on with a young in-house team to help them actually adopt it.",
-    "overview": "Somos Internet is a telecommunications company running multiple digital products — apps, websites, and web apps — with no unified design system behind them. The gaps showed up in the details: the same button existed in four slightly different styles, dropdowns varied in size and font across products, and the color palette had drifted into near-duplicates depending on which product you looked at. That inconsistency was slowing down both design and development, and making it harder for the products to feel like they belonged to the same company.",
-    "goal": "The Somos Internet team wanted a unified component library that could bring one consistent visual language across every product. This meant not just designing components, but consolidating years of drift — collapsing duplicate buttons, dropdowns, and color values into a single source of truth developers could actually build from.",
+    "summary": "Somos Internet's digital products had drifted into inconsistency: duplicate buttons, dropdowns, and colors across apps, websites, and web apps. I audited, consolidated, and built a unified component library, then worked hands-on with a young in-house team to help them actually adopt it.",
+    "overview": "Somos Internet runs multiple digital products with no unified design system behind them: buttons existed in four different styles, dropdowns varied across products, and colors had drifted into near-duplicates. That inconsistency was slowing down design and development, and making the products feel disconnected.",
+    "goal": "The Somos Internet team wanted a unified component library that could bring ==one consistent visual language across every product==, consolidating years of drift into a single source of truth developers could build from.",
     "role": "Senior Product Designer working as a solo freelance consultant, owning both strategy and execution of the design system",
     "year": "2024",
     "image": "/project-02.png",
@@ -279,12 +347,12 @@
       {
         "step": "04",
         "title": "Building the component library",
-        "description": "Using the audit as a priority list, I built the components in Figma, working closely with the development team to make sure every component was compatible with Tailwind CSS — the framework their products were actually built on. This wasn't a design exercise happening in isolation; every component was checked against what development could realistically implement."
+        "description": "Using the audit as a priority list, I built the components in Figma, working closely with the development team to make sure every component was compatible with Tailwind CSS, the framework their products were actually built on. This wasn't a design exercise happening in isolation; every component was checked against what development could realistically implement."
       },
       {
         "step": "05",
         "title": "Handoff and developer adoption",
-        "description": "The biggest friction on this project wasn't visual, it was organizational: Somos' in-house designers were junior and just starting to work with product design, so there wasn't an existing visual practice to plug into, and the developers weren't used to working with custom or branded components. Handing off a Figma file alone wasn't going to be enough. So I ran several handoff and adoption sessions with the dev team to align on how the components should be used and gather feedback in the process. We also built a small local preview library, similar in spirit to Storybook, so developers could see and test components in isolation before wiring them into product — giving them a sandbox to get comfortable with the system rather than learning it live in production."
+        "description": "The biggest friction on this project wasn't visual, it was organizational: Somos' in-house designers were junior and just starting to work with product design, so there wasn't an existing visual practice to plug into, and the developers weren't used to working with custom or branded components. Handing off a Figma file alone wasn't going to be enough.\n\nSo I ran several handoff and adoption sessions with the dev team to align on how the components should be used and gather feedback in the process. We also built a small local preview library, similar in spirit to Storybook, so developers could see and test components in isolation before wiring them into product, giving them a sandbox to get comfortable with the system rather than learning it live in production."
       }
     ],
     "impact": [
@@ -306,7 +374,7 @@
       },
       {
         "title": "Bridging the gap with a young team",
-        "description": "Because the in-house team was still early in building out a design practice, the real work wasn't just producing components — it was building the collaboration muscle between design and development from the ground up. If I did this again, I'd build in dedicated training time even earlier, since a junior team benefits as much from how to work with a design system as from the system itself.",
+        "description": "Because the in-house team was still early in building out a design practice, the real work wasn't just producing components: it was building the collaboration muscle between design and development from the ground up. If I did this again, I'd build in dedicated training time even earlier, since a junior team benefits as much from how to work with a design system as from the system itself.",
         "metric": {
           "value": "5",
           "label": "Hands-on adoption sessions run"

@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 
 export interface ProjectCardProps {
   title: string;
-  description: string;
+  description?: string;
   company: string;
   year: string;
   href: string;
@@ -80,7 +80,7 @@ export default function ProjectCard({
     <article
       ref={articleRef}
       className={`group border-b-2 border-border hover:bg-surface ${
-        compact ? "" : "py-6 md:py-8 xl:py-20"
+        compact ? "" : "py-8 md:py-10 xl:py-12"
       } ${featured ? "border-t-2" : "border-t-0"}`}
       style={compact ? {} : {
         opacity: visible ? 1 : 0,
@@ -92,7 +92,7 @@ export default function ProjectCard({
         className={
           compact
             ? "flex flex-col"
-            : "container-page flex flex-col gap-12 md:flex-row md:items-start md:gap-10 xl:gap-18"
+            : "container-page flex flex-col gap-10 md:flex-row md:items-stretch md:justify-end md:gap-10 xl:gap-18"
         }
       >
         {/* Image */}
@@ -133,29 +133,45 @@ export default function ProjectCard({
           className={
             compact
               ? "flex flex-col gap-4 p-5"
-              : "flex flex-col items-start justify-between self-stretch min-w-0 order-2 md:order-1 md:w-[35%]"
+              : "flex flex-col items-start justify-center gap-8 min-w-0 order-2 md:order-1 md:w-[35%] md:gap-10 xl:gap-14"
           }
         >
           <div
             className={
               compact
                 ? "flex flex-col gap-2"
-                : "flex flex-col gap-6 w-full md:gap-6"
+                : "flex flex-col gap-4 w-full md:gap-6"
             }
           >
-            <h2 className="font-heading text-xl font-bold leading-[1.1] tracking-[-0.24px] text-white md:text-2xl">
+            <h2
+              className={
+                compact
+                  ? "font-heading text-xl font-bold leading-[1.1] tracking-[-0.24px] text-white md:text-2xl"
+                  : "font-heading text-[28px] font-medium leading-[1.2] tracking-[-0.4px] text-white md:text-[34px] xl:text-[40px]"
+              }
+            >
               {title}
             </h2>
-            <p className="font-body text-base leading-[1.4] text-white md:text-[20px]">
-              {description}
-            </p>
-            <div className="flex items-center gap-2 font-heading text-base font-medium leading-[1.4] text-accent md:text-[20px]">
-              <span>{company}</span>
-              <span>·</span>
-              <span>{year}</span>
-            </div>
+            {compact && (
+              <p className="font-body text-base leading-[1.4] text-white md:text-[20px]">
+                {description}
+              </p>
+            )}
+            {compact ? (
+              <div className="flex items-center gap-2 font-heading text-base font-medium leading-[1.4] text-accent md:text-[20px]">
+                <span>{company}</span>
+                <span>·</span>
+                <span>{year}</span>
+              </div>
+            ) : (
+              <div className="flex items-center gap-2 font-heading text-[16px] font-medium uppercase leading-[1.4] tracking-[1.6px] text-meta md:text-[20px]">
+                <span>Client: {company}</span>
+                <span>·</span>
+                <span>{year}</span>
+              </div>
+            )}
           </div>
-          <Button href={href} className={compact ? "mt-3" : "mt-6 w-full md:w-auto md:mt-8"}>
+          <Button href={href} className={compact ? "mt-3" : "w-full md:w-auto"}>
             View case study
           </Button>
         </div>

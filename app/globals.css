@@ -13,6 +13,8 @@
   --color-content-text:        #0a2326;
   --color-content-placeholder: #dbe9ea;
   --color-content-border:      #cce1e4;
+  --color-muted: #eff9fa;
+  --color-meta:  #70a2a8;
 
   /* ── Typography ─────────────────────────────────── */
   --font-heading: var(--font-space-grotesk), sans-serif;
@@ -20,6 +22,7 @@
 
   /* ── Border radius ──────────────────────────────── */
   --radius-card: 12px;
+  --radius-card-lg: 24px;
   --radius-pill: 999px;
 
   /* ── Transitions ─────────────────────────────────── */

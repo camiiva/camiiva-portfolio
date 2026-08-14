@@ -47,6 +47,8 @@ Tokens live in `app/globals.css` under `@theme inline`. Tailwind v4 has **no `ta
 | `text-accent`       | `#33fab3`  | Accent (mint green)            |
 | `bg-accent`         | `#33fab3`  | Button background              |
 | `text-text-dark`    | `#0a2326`  | Text on accent (button label)  |
+| `text-muted`        | `#eff9fa`  | Light-grey body text on dark backgrounds |
+| `text-meta`         | `#70a2a8`  | Muted teal metadata text (client/year line) |
 
 Always use token classes, never raw hex values in components.
 
