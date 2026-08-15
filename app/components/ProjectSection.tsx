@@ -7,9 +7,10 @@ interface ProjectSectionProps {
   title: string;
   body: string;
   sectionId: string;
+  image?: string;
 }
 
-export default function ProjectSection({ title, body, sectionId }: ProjectSectionProps) {
+export default function ProjectSection({ title, body, sectionId, image = "/project-02.png" }: ProjectSectionProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
 
@@ -50,7 +51,7 @@ export default function ProjectSection({ title, body, sectionId }: ProjectSectio
         {firstParagraph}
       </p>
       <div className="relative h-52 w-full overflow-hidden rounded-card bg-img-bg md:h-72 xl:h-[600px] xl:max-w-[1106px]">
-        <Image src="/project-02.png" alt="" fill className="object-cover" />
+        <Image src={image} alt="" fill className="object-cover" />
       </div>
       {restParagraphs.map((paragraph, i) => (
         <p

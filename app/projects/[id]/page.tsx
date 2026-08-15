@@ -87,6 +87,7 @@ export default async function ProjectPage({
                   sectionId={slugify(section.title)}
                   title={section.title}
                   body={section.description}
+                  image={"image" in section ? section.image : undefined}
                 />
               ))}
 

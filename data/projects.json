@@ -11,7 +11,7 @@
     "goal": "The Evinova team wanted Evie to ==become the central AI-powered interface and orchestrator== for all of Evinova's assistants and agents, combining a single UX with multi-agent orchestration and enterprise-grade governance.",
     "role": "Senior UX Consultant working under the supervision of my Design Lead",
     "year": "2026",
-    "image": "/project-02.png",
+    "image": "/project-assets/evie/evie-cover.png",
     "deliverables": [
       "UX/UI Design",
       "Web App",
@@ -28,32 +28,38 @@
       {
         "step": "01",
         "title": "Access point and navigation",
-        "description": "We couldn't modify our existing products' UI directly, so the first design challenge was figuring out how users would access and navigate the Assistant without touching any of that. We landed on an overlay pattern that sits above the main UI, triggered by a floating button in the bottom-right corner, with support for multiple view modes: floating, sidebar, and fullscreen (out of scope for now), so users could choose whatever fit their workflow best."
+        "description": "We couldn't modify our existing products' UI directly, so the first design challenge was figuring out how users would access and navigate the Assistant without touching any of that. We landed on an overlay pattern that sits above the main UI, triggered by a floating button in the bottom-right corner, with support for multiple view modes: floating, sidebar, and fullscreen (out of scope for now), so users could choose whatever fit their workflow best.",
+        "image": "/project-assets/evie/evie-01.png"
       },
       {
         "step": "02",
         "title": "Establishing the baseline experience",
-        "description": "Evie is a clinical-trial-specific assistant, but a lot of its interaction patterns are shared across any AI agent or chatbot: things like the empty state, chat detail, chat menu, context handling, and how it shows its \"thinking\" and reasoning. I wanted a solid baseline in place before designing anything industry-specific, so those foundational patterns could support study-specific use cases later without needing to be reworked for consistency."
+        "description": "Evie is a clinical-trial-specific assistant, but a lot of its interaction patterns are shared across any AI agent or chatbot: things like the empty state, chat detail, chat menu, context handling, and how it shows its \"thinking\" and reasoning. I wanted a solid baseline in place before designing anything industry-specific, so those foundational patterns could support study-specific use cases later without needing to be reworked for consistency.",
+        "image": "/project-assets/evie/evie-02.png"
       },
       {
         "step": "03",
         "title": "Defining agents and modes",
-        "description": "With navigation and baseline states in place, we moved into the features that were specific to Evinova's industry and product. Agents were one of them: specialized helpers that could perform tasks depending on a user's role or where they were in the clinical study lifecycle, from querying study documents to extracting document data to building study exports for governance meetings. Modes were the other: each one shapes how the Assistant responds and what kind of output it produces, and users could either pick a specific mode or select \"Auto\" and let the Assistant decide."
+        "description": "With navigation and baseline states in place, we moved into the features that were specific to Evinova's industry and product. Agents were one of them: specialized helpers that could perform tasks depending on a user's role or where they were in the clinical study lifecycle, from querying study documents to extracting document data to building study exports for governance meetings. Modes were the other: each one shapes how the Assistant responds and what kind of output it produces, and users could either pick a specific mode or select \"Auto\" and let the Assistant decide.",
+        "image": "/project-assets/evie/evie-03.png"
       },
       {
         "step": "04",
         "title": "Adding references",
-        "description": "Our products deal with several different object types tied to a study: studies, study options, study documents, page links. We needed a way to reference them directly inside the chat to get more accurate, targeted results. We added a global search that let users look up any object type, each visually differentiated with iconography and color so people could recognize what they were browsing before selecting it."
+        "description": "Our products deal with several different object types tied to a study: studies, study options, study documents, page links. We needed a way to reference them directly inside the chat to get more accurate, targeted results. We added a global search that let users look up any object type, each visually differentiated with iconography and color so people could recognize what they were browsing before selecting it.",
+        "image": "/project-assets/evie/evie-04.png"
       },
       {
         "step": "05",
         "title": "Building in guardrails",
-        "description": "Guardrails are easy to overlook but mattered a lot here: how the Assistant handles requests it shouldn't act on. Mapping every possible use case wasn't realistic, given how many different questions and requests users could throw at it. So instead we classified guardrail types and built a simple, scalable framework for structuring the Assistant's responses in those situations, backed by 2 to 3 concrete examples to show how it should look in practice."
+        "description": "Guardrails are easy to overlook but mattered a lot here: how the Assistant handles requests it shouldn't act on. Mapping every possible use case wasn't realistic, given how many different questions and requests users could throw at it. So instead we classified guardrail types and built a simple, scalable framework for structuring the Assistant's responses in those situations, backed by 2 to 3 concrete examples to show how it should look in practice.",
+        "image": "/project-assets/evie/evie-05.png"
       },
       {
         "step": "06",
         "title": "Mapping study-specific use cases",
-        "description": "Once the baseline experience and interaction patterns felt solid, we mapped out the study-specific use cases that were already common among users, like comparing study options or asking questions about a study and its options, and designed for those directly."
+        "description": "Once the baseline experience and interaction patterns felt solid, we mapped out the study-specific use cases that were already common among users, like comparing study options or asking questions about a study and its options, and designed for those directly.",
+        "image": "/project-assets/evie/evie-06.png"
       }
     ],
     "impact": [
@@ -64,6 +70,85 @@
       {
         "title": "How fast AI patterns move",
         "description": "Working on two different Evinova AI assistants, Study Document Assistant and now Evie, in a short stretch of time made it clear how quickly interaction patterns change when they're tied to AI. What felt like a solid baseline pattern a few months earlier could already feel dated by the next project, which means staying current isn't optional if you're designing in this space."
+      }
+    ]
+  },
+  {
+    "id": "somos-internet",
+    "title": "Building the Design System Somos Internet Never Had",
+    "client": "Somos Internet",
+    "product": "Design System",
+    "category": "Case Study 05",
+    "tagline": "Building the design foundation Somos Internet never had",
+    "summary": "Somos Internet's digital products had drifted into inconsistency: duplicate buttons, dropdowns, and colors across apps, websites, and web apps. I audited, consolidated, and built a unified component library, then worked hands-on with a young in-house team to help them actually adopt it.",
+    "overview": "Somos Internet runs multiple digital products with no unified design system behind them: buttons existed in four different styles, dropdowns varied across products, and colors had drifted into near-duplicates. That inconsistency was slowing down design and development, and making the products feel disconnected.",
+    "goal": "The Somos Internet team wanted a unified component library that could bring ==one consistent visual language across every product==, consolidating years of drift into a single source of truth developers could build from.",
+    "role": "Senior Product Designer working as a solo freelance consultant, owning both strategy and execution of the design system",
+    "year": "2024",
+    "image": "/project-assets/somos/somos-cover.png",
+    "deliverables": [
+      "Design System",
+      "Component Library",
+      "Design Audit",
+      "Developer Handoff"
+    ],
+    "tags": [
+      "Design System",
+      "Component Library",
+      "Telecommunications",
+      "Consultancy"
+    ],
+    "process": [
+      {
+        "step": "01",
+        "title": "Understanding the problem",
+        "description": "Before designing anything, I audited what already existed. I reviewed each product's documentation and got access to test and production environments to see the components in context, not just in Figma files. The audit surfaced the real scope of the drift: the same button, dropdown, and color values existed in multiple variants across products, differing in color, font family, and size with no clear source of truth. That gave me a concrete list to prioritize rather than starting from a blank page."
+      },
+      {
+        "step": "02",
+        "title": "Defining the visual style",
+        "description": "Before touching components, I designed a handful of key screens to define and get sign-off on the visual direction. Getting alignment here first meant the component work that followed had a clear target instead of being negotiated component-by-component."
+      },
+      {
+        "step": "03",
+        "title": "Building the foundations",
+        "description": "With the direction approved, I established the core visual foundations: color palette, typography, and grid system. I also selected a pre-existing icon library that matched Somos' visual identity rather than building one from scratch, keeping the project focused on what actually needed custom work."
+      },
+      {
+        "step": "04",
+        "title": "Building the component library",
+        "description": "Using the audit as a priority list, I built the components in Figma, working closely with the development team to make sure every component was compatible with Tailwind CSS, the framework their products were actually built on. This wasn't a design exercise happening in isolation; every component was checked against what development could realistically implement."
+      },
+      {
+        "step": "05",
+        "title": "Handoff and developer adoption",
+        "description": "The biggest friction on this project wasn't visual, it was organizational: Somos' in-house designers were junior and just starting to work with product design, so there wasn't an existing visual practice to plug into, and the developers weren't used to working with custom or branded components. Handing off a Figma file alone wasn't going to be enough.\n\nSo I ran several handoff and adoption sessions with the dev team to align on how the components should be used and gather feedback in the process. We also built a small local preview library, similar in spirit to Storybook, so developers could see and test components in isolation before wiring them into product, giving them a sandbox to get comfortable with the system rather than learning it live in production."
+      }
+    ],
+    "impact": [
+      {
+        "title": "Scalability for the future",
+        "description": "The design foundation this project put in place means Somos' products can grow while keeping a consistent, recognizable visual style. Standardizing the design language now gives them a system that can support future products and features without starting from scratch each time.",
+        "metric": {
+          "value": "12",
+          "label": "Reusable components shipped"
+        }
+      },
+      {
+        "title": "Unified and consistent UX",
+        "description": "The component library closed the gap between products that used to feel like they came from different companies. Consolidating duplicate buttons, dropdowns, and colors into one system made interactions more intuitive and familiar for users, and fixed usability issues that had been quietly accumulating.",
+        "metric": {
+          "value": "80%",
+          "label": "Reduction in duplicate UI patterns"
+        }
+      },
+      {
+        "title": "Bridging the gap with a young team",
+        "description": "Because the in-house team was still early in building out a design practice, the real work wasn't just producing components: it was building the collaboration muscle between design and development from the ground up. If I did this again, I'd build in dedicated training time even earlier, since a junior team benefits as much from how to work with a design system as from the system itself.",
+        "metric": {
+          "value": "5",
+          "label": "Hands-on adoption sessions run"
+        }
       }
     ]
   },
@@ -79,7 +164,7 @@
     "goal": "Evinova wanted an AI Assistant that could search study documents and return ==fast, accurate, sourced answers==, without sacrificing reliability.",
     "role": "Senior UX Consultant working solo on design strategy and execution within a lean four-person team",
     "year": "2025",
-    "image": "/project-02.png",
+    "image": "/project-assets/sda/sda-cover.png",
     "deliverables": [
       "UX/UI Design",
       "Web App",
@@ -236,7 +321,7 @@
     "goal": "The Jombine team wanted a digital experience where employers and candidates could ==connect and optimize the hiring process==.",
     "role": "I led the design and creative process of the project from start to finish. In addition to overseeing the strategy and execution of design tasks. ",
     "year": "2023",
-    "image": "/project-02.png",
+    "image": "/project-assets/jombine/jombine-cover.png",
     "deliverables": [
       "UX/UI Design",
       "Web App",
@@ -300,85 +385,6 @@
       {
         "title": "User testing and metrics",
         "description": "If I were to work on this project again, I think user testing and analytics would have been valuable to validate if the designs were solving user needs, but unfortunately, they were not feasible due to budget constraints."
-      }
-    ]
-  },
-  {
-    "id": "somos-internet",
-    "title": "Building the Design System Somos Internet Never Had",
-    "client": "Somos Internet",
-    "product": "Design System",
-    "category": "Case Study 05",
-    "tagline": "Building the design foundation Somos Internet never had",
-    "summary": "Somos Internet's digital products had drifted into inconsistency: duplicate buttons, dropdowns, and colors across apps, websites, and web apps. I audited, consolidated, and built a unified component library, then worked hands-on with a young in-house team to help them actually adopt it.",
-    "overview": "Somos Internet runs multiple digital products with no unified design system behind them: buttons existed in four different styles, dropdowns varied across products, and colors had drifted into near-duplicates. That inconsistency was slowing down design and development, and making the products feel disconnected.",
-    "goal": "The Somos Internet team wanted a unified component library that could bring ==one consistent visual language across every product==, consolidating years of drift into a single source of truth developers could build from.",
-    "role": "Senior Product Designer working as a solo freelance consultant, owning both strategy and execution of the design system",
-    "year": "2024",
-    "image": "/project-02.png",
-    "deliverables": [
-      "Design System",
-      "Component Library",
-      "Design Audit",
-      "Developer Handoff"
-    ],
-    "tags": [
-      "Design System",
-      "Component Library",
-      "Telecommunications",
-      "Consultancy"
-    ],
-    "process": [
-      {
-        "step": "01",
-        "title": "Understanding the problem",
-        "description": "Before designing anything, I audited what already existed. I reviewed each product's documentation and got access to test and production environments to see the components in context, not just in Figma files. The audit surfaced the real scope of the drift: the same button, dropdown, and color values existed in multiple variants across products, differing in color, font family, and size with no clear source of truth. That gave me a concrete list to prioritize rather than starting from a blank page."
-      },
-      {
-        "step": "02",
-        "title": "Defining the visual style",
-        "description": "Before touching components, I designed a handful of key screens to define and get sign-off on the visual direction. Getting alignment here first meant the component work that followed had a clear target instead of being negotiated component-by-component."
-      },
-      {
-        "step": "03",
-        "title": "Building the foundations",
-        "description": "With the direction approved, I established the core visual foundations: color palette, typography, and grid system. I also selected a pre-existing icon library that matched Somos' visual identity rather than building one from scratch, keeping the project focused on what actually needed custom work."
-      },
-      {
-        "step": "04",
-        "title": "Building the component library",
-        "description": "Using the audit as a priority list, I built the components in Figma, working closely with the development team to make sure every component was compatible with Tailwind CSS, the framework their products were actually built on. This wasn't a design exercise happening in isolation; every component was checked against what development could realistically implement."
-      },
-      {
-        "step": "05",
-        "title": "Handoff and developer adoption",
-        "description": "The biggest friction on this project wasn't visual, it was organizational: Somos' in-house designers were junior and just starting to work with product design, so there wasn't an existing visual practice to plug into, and the developers weren't used to working with custom or branded components. Handing off a Figma file alone wasn't going to be enough.\n\nSo I ran several handoff and adoption sessions with the dev team to align on how the components should be used and gather feedback in the process. We also built a small local preview library, similar in spirit to Storybook, so developers could see and test components in isolation before wiring them into product, giving them a sandbox to get comfortable with the system rather than learning it live in production."
-      }
-    ],
-    "impact": [
-      {
-        "title": "Scalability for the future",
-        "description": "The design foundation this project put in place means Somos' products can grow while keeping a consistent, recognizable visual style. Standardizing the design language now gives them a system that can support future products and features without starting from scratch each time.",
-        "metric": {
-          "value": "12",
-          "label": "Reusable components shipped"
-        }
-      },
-      {
-        "title": "Unified and consistent UX",
-        "description": "The component library closed the gap between products that used to feel like they came from different companies. Consolidating duplicate buttons, dropdowns, and colors into one system made interactions more intuitive and familiar for users, and fixed usability issues that had been quietly accumulating.",
-        "metric": {
-          "value": "80%",
-          "label": "Reduction in duplicate UI patterns"
-        }
-      },
-      {
-        "title": "Bridging the gap with a young team",
-        "description": "Because the in-house team was still early in building out a design practice, the real work wasn't just producing components: it was building the collaboration muscle between design and development from the ground up. If I did this again, I'd build in dedicated training time even earlier, since a junior team benefits as much from how to work with a design system as from the system itself.",
-        "metric": {
-          "value": "5",
-          "label": "Hands-on adoption sessions run"
-        }
       }
     ]
   }
