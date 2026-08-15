@@ -5,6 +5,7 @@ import TableOfContents from "@/app/components/TableOfContents";
 import ProjectCard from "@/app/components/ProjectCard";
 import CursorGlow from "@/app/components/CursorGlow";
 import ProjectHeader from "@/app/components/ProjectHeader";
+import ProjectBanner from "@/app/components/ProjectBanner";
 import ProjectSection from "@/app/components/ProjectSection";
 import ProjectImpact from "@/app/components/ProjectImpact";
 import HighlightText from "@/app/components/HighlightText";
@@ -63,6 +64,8 @@ export default async function ProjectPage({
           year={project.year}
         />
       </header>
+
+      <ProjectBanner image={project.image} />
 
       {/* ── Light content area ───────────────────────────────── */}
       <main className="container-page py-12 md:py-16 xl:py-20">

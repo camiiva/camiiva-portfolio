@@ -50,7 +50,7 @@ export default function ProjectSection({ title, body, sectionId, image = "/proje
       <p className="mb-12 font-body text-base leading-[1.4] text-content-text md:mb-16 md:text-[20px] xl:max-w-[1106px]">
         {firstParagraph}
       </p>
-      <div className="relative h-52 w-full overflow-hidden rounded-card bg-img-bg md:h-72 xl:h-[600px] xl:max-w-[1106px]">
+      <div className="relative aspect-video w-full overflow-hidden rounded-card bg-img-bg xl:max-w-[1106px]">
         <Image src={image} alt="" fill className="object-cover" />
       </div>
       {restParagraphs.map((paragraph, i) => (
