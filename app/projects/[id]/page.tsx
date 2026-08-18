@@ -5,11 +5,14 @@ import TableOfContents from "@/app/components/TableOfContents";
 import ProjectCard from "@/app/components/ProjectCard";
 import CursorGlow from "@/app/components/CursorGlow";
 import ProjectHeader from "@/app/components/ProjectHeader";
+import PasswordGate from "@/app/components/PasswordGate";
+import ProjectSkeleton from "@/app/components/ProjectSkeleton";
 import ProjectBanner from "@/app/components/ProjectBanner";
 import ProjectSection from "@/app/components/ProjectSection";
 import ProjectImpact from "@/app/components/ProjectImpact";
 import HighlightText from "@/app/components/HighlightText";
 import projects from "@/data/projects.json";
+import { isUnlocked } from "@/app/lib/restricted";
 
 function slugify(text: string) {
   return text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
@@ -27,9 +30,15 @@ export async function generateMetadata({
   const { id } = await params;
   const project = projects.find((p) => p.id === id);
   if (!project) return {};
+
+  const restricted = "restricted" in project ? Boolean(project.restricted) : false;
+  const locked = restricted && !(await isUnlocked());
+
   return {
     title: `${project.title} — Camila Valencia`,
-    description: project.overview,
+    description: locked
+      ? "This case study is restricted. Enter the password on the page to view it."
+      : project.overview,
   };
 }
 
@@ -42,6 +51,36 @@ export default async function ProjectPage({
   const project = projects.find((p) => p.id === id);
 
   if (!project) notFound();
+
+  const restricted = "restricted" in project ? Boolean(project.restricted) : false;
+  const locked = restricted && !(await isUnlocked());
+
+  // Server-verified gate: when locked, none of the real case-study content
+  // below is ever assembled into the response.
+  if (locked) {
+    return (
+      <div className="min-h-screen bg-content-bg md:cursor-none">
+        <CursorGlow />
+
+        <header className="bg-bg text-white">
+          <NavBar />
+          <ProjectHeader
+            title={project.title}
+            projectType={project.product}
+            deliverables={project.deliverables}
+            client={project.client}
+            year={project.year}
+          />
+        </header>
+
+        <PasswordGate projectTitle={project.title}>
+          <ProjectSkeleton />
+        </PasswordGate>
+
+        <Footer light />
+      </div>
+    );
+  }
 
   const otherProjects = projects.filter((p) => p.id !== id);
 
@@ -135,6 +174,7 @@ export default async function ProjectPage({
                 image={p.image}
                 href={`/projects/${p.id}`}
                 compact
+                restricted={"restricted" in p ? p.restricted : false}
               />
             ))}
           </div>

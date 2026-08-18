@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Button from "./Button";
+import LockIcon from "./LockIcon";
 import { useEffect, useRef, useState } from "react";
 
 export interface ProjectCardProps {
@@ -13,6 +14,7 @@ export interface ProjectCardProps {
   image?: string;
   featured?: boolean;
   compact?: boolean;
+  restricted?: boolean;
 }
 
 export default function ProjectCard({
@@ -24,6 +26,7 @@ export default function ProjectCard({
   image = "/project-02.png",
   featured = false,
   compact = false,
+  restricted = false,
 }: ProjectCardProps) {
   const articleRef = useRef<HTMLElement>(null);
   const parallaxRef = useRef<HTMLDivElement>(null);
@@ -150,6 +153,18 @@ export default function ProjectCard({
                   : "font-heading text-[28px] font-medium leading-[1.2] tracking-[-0.4px] text-white md:text-[34px] xl:text-[40px]"
               }
             >
+              {restricted && (
+                <>
+                  <span className="sr-only">Restricted project — </span>
+                  <LockIcon
+                    className={
+                      compact
+                        ? "mr-2 inline-block h-4 w-4 shrink-0 align-middle text-accent md:h-5 md:w-5"
+                        : "mr-3 inline-block h-6 w-6 shrink-0 align-middle text-accent md:h-7 md:w-7"
+                    }
+                  />
+                </>
+              )}
               {title}
             </h2>
             {compact && (

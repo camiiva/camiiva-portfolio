@@ -20,6 +20,7 @@ interface ProjectImpactProps {
 const GRID_COLS_CLASS: Record<number, string> = {
   1: "sm:grid-cols-1 xl:grid-cols-1",
   2: "sm:grid-cols-2 xl:grid-cols-2",
+  4: "sm:grid-cols-2 xl:grid-cols-2",
 };
 
 export default function ProjectImpact({ sectionId, title, items }: ProjectImpactProps) {

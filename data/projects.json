@@ -1,6 +1,7 @@
 [
   {
     "id": "evie",
+    "restricted": true,
     "title": "Building Evinova's Agentic Assistant 'Evie'",
     "client": "Evinova",
     "product": "Web app",
@@ -154,6 +155,7 @@
   },
   {
     "id": "study-document-assistant",
+    "restricted": true,
     "title": "Designing Evinova's First AI-Powered Assistant",
     "client": "Evinova",
     "product": "Web app",
@@ -214,8 +216,16 @@
         }
       },
       {
+        "title": "Strong pilot reception",
+        "description": "A pilot of 14 users scored the Assistant 71 for CSAT and 72 for UMUX, landing in the \"Good\" and \"Acceptable\" bands, with 100% rating its usability positively. Users specifically called out the ability to verify every answer against its source document as the most valuable part of the experience.",
+        "metric": {
+          "value": "71",
+          "label": "CSAT score (pilot, n=14)"
+        }
+      },
+      {
         "title": "Business impact",
-        "description": "Early CSAT results after launch were strong [INSERT METRICS HERE], and the product's value was clear enough that it helped close 2 contracts with major pharma clients.",
+        "description": "The product's value was clear enough to help close 2 contracts with major pharma clients.",
         "metric": {
           "value": "2",
           "label": "Pharma contracts signed"

@@ -23,6 +23,7 @@ export default function Home() {
             image={project.image}
             href={`/projects/${project.id}`}
             featured={i === 0}
+            restricted={"restricted" in project ? project.restricted : false}
           />
         ))}
       </main>
